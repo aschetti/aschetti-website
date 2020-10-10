@@ -14,7 +14,7 @@ role: Coordinator Open Science
 
 # Organizations/Affiliations
 organizations:
-- name: Erasmus University Rotterdam
+- name: Erasmus Universiteit Rotterdam
   url: "https://www.eur.nl/en"
 
 # Short bio (displayed in user profile at end of posts)
