@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Antonio Schettino
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,33 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Coordinator Open Science
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Erasmus University Rotterdam
+  url: "https://www.eur.nl/en"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Open science, R, Bayes. Oh, and cats.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- open science
+- R
+- MATLAB
+- Bayes
+- Attention
+- Emotion
+- EEG
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: PhD in Psychology
+    institution: Ghent University
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: MSc in Psychology
+    institution: University of Milan-Bicocca
+    year: 2007
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,16 +45,32 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: "mailto:antonio.schettino@igdore.org"
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
+  link: https://twitter.com/asch3tti
+- icon: orcid
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://orcid.org/0000-0001-8065-6082/
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/aschetti/
+- icon: osf
+  icon_pack: ai
+  link: https://osf.io/zbv65/
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=D-Zc-_gAAAAJ&hl=en&oi=ao/
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Antonio_Schettino2/
+- icon: publons
+  icon_pack: ai
+  link: https://publons.com/author/337478/antonio-schettino#profile/
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/antonio-schettino/
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -61,18 +78,18 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "antonio.schettino@igdore.org"
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Researchers
-- Visitors
+# user_groups:
+# - Researchers
+# - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I have a background in experimental psychology, cognitive and affective electrophysiology. During my academic career, I investigated the relationship between emotions and visual perception using a wide range of methodological and statistical tools. I adopted transparent and open science practices at every stage of the research cycle, from the preregistration of the initial idea to the publication of the final manuscript in peer-reviewed open access journals.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+As Coordinator of the Open Science Community Rotterdam, I facilitate communications between members of the community, organize events and workshops, communicate such activities on social media, and personally support individual researchers and research groups with day-to-day activities related to open science.
