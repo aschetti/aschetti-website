@@ -3,7 +3,7 @@
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 40  # Order that this section will appear.
+weight = 20  # Order that this section will appear.
 
 title = "Experience"
 subtitle = ""
@@ -17,28 +17,52 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+# Experiences.
+#   Add/remove as many `[[experience]]` blocks below as you like.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Coordinator Open Science"
+  company = "Erasmus Universiteit Rotterdam"
+  company_url = "https://www.eur.nl/en"
+  location = "Netherlands"
+  date_start = "2019-04-01"
   date_end = ""
   description = """
-  Responsibilities include:
+  Responsibilities:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * create platforms for easy communication between members of the community
+  * organize events and workshops
+  * promote open science activities on social media
+  * support individuals and research groups with day-to-day activities
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Post-doctoral Researcher"
+  company = "Universiteit Gent"
+  company_url = "https://www.ugent.be/en"
+  location = "Belgium"
+  date_start = "2015-10-01"
+  date_end = "2018-09-30"
+  description = """
+  Responsibilities:
+  
+  * ideation and programming of empirical studies
+  * data collection, analysis, and visualization
+  * share results (in written and oral communications) with other researchers
+  * co-supervision of MSc and PhD students
+  """
 
+[[experience]]
+  title = "Post-doctoral Researcher"
+  company = "Universität Leipzig"
+  company_url = "https://www.uni-leipzig.de/en/"
+  location = "Germany"
+  date_start = "2013-03-01"
+  date_end = "2015-09-30"
+  description = """
+  Responsibilities: see above
+  """
 +++
