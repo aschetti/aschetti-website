@@ -48,7 +48,7 @@ social:
   link: "mailto:antonio.schettino@igdore.org"
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/asch3tti
+  link: https://twitter.com/asch3tti/
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0001-8065-6082/
