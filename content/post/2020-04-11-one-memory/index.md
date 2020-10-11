@@ -5,7 +5,7 @@ summary: Remembering Jon Tennant.
 authors:
 - admin
 tags: 
-- open science
+- people
 categories: 
 - personal
 date: "2020-04-11"

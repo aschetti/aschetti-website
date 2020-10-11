@@ -8,7 +8,7 @@ tags:
 - R Markdown
 - text analysis
 categories: 
-- work
+- R
 summary: "My first analysis of a document using ```tidytext```."
 output:
   blogdown::html_page:
