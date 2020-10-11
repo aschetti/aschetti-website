@@ -1,0 +1,229 @@
+---
+title: Happy Holidays!
+authors:
+- admin
+date: "2017-12-10"
+lastmod: "2017-12-10"
+tags: 
+- R Markdown
+- image processing
+categories: 
+- R
+output:
+  blogdown::html_page:
+    toc: no
+    number_sections: no
+featured: no
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: yes
+projects: []
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+<p>In my first post I broke the ice by drawing mesmerizing <a href="https://asch3tti.netlify.com/post/attractive-attractor/">Clifford attractors</a>. My second post was supposed to be slightly more serious (e.g., something about data analysis, or what I think about the recent <a href="http://sometimesimwrong.typepad.com/wrong/2017/07/alpha-wars.html">alpha wars</a>), but I have not yet had the time… and my crippling perfectionism is surely not helping.</p>
+<p>So, what better way to procrastinate than to play with two of my favorite things in the world, <strong>R</strong> and our cat <strong>Borre</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>?</p>
+<p>I set out to create a silly image that is probably going to haunt me in my future job interviews<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. The initial inspiration came from a picture that my partner Inez<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> modified for a gift we recently contributed to (yes, Lien, I’m talking about you):</p>
+<div class="figure">
+<img src="/static/media/borre.png" alt="" />
+<p class="caption"><strong><em>Figure 1.</em></strong> <em>A Borre floating in the void. He has a flat face.</em></p>
+</div>
+<p>The holidays are approaching, so we thought of adding a small Christmas hat on that big head (our very own <a href="https://en.wikipedia.org/wiki/Yule_Cat">Yule cat</a>):</p>
+<div class="figure">
+<img src="/static/media/yule_borre.png" alt="" />
+<p class="caption"><strong><em>Figure 2.</em></strong> <em>Born for this look.</em></p>
+</div>
+<p>A simple white background was not enough. We needed something more appropriate for this period of the year… ah, yes! Snow!</p>
+<p>In a recent tweet, <a href="https://twitter.com/ikashnitsky">Ilya Kashnitsky</a> showed how to create static snow flakes on a dark background:</p>
+{{% tweet "937786580231696384" %}}
+<p>I slightly modified the code to have more snow flakes but, more importantly, I animated the plot using <a href="https://github.com/dgrtwo/gganimate"><code>gganimate</code></a>:</p>
+<div class="figure">
+<img src="/static/media/snow.gif" alt="" />
+<p class="caption"><strong><em>Figure 3.</em></strong> <em>Dynamic snow.</em></p>
+</div>
+<p>Finally, I used <a href="https://cran.r-project.org/web/packages/magick/index.html"><code>magick</code></a> to blur Borre’s face (to make it even more ethereal) and overlay it on the animated snow:</p>
+<div class="figure">
+<img src="/static/media/snow_borre.gif" alt="" />
+<p class="caption"><strong><em>Figure 4.</em></strong> <em>Our flat-faced Yule cat in the snow.</em></p>
+</div>
+<p>The end result is a big flat face fluctuating in the air, like a spooky and ominous reminder of our mortality even in these days of opulence.</p>
+<center>
+<h1>
+<strong>Happy holidays!</strong>
+</h1>
+</center>
+<hr />
+<hr />
+<div id="edit-december-19th-2017" class="section level2">
+<h2>EDIT December 19th, 2017</h2>
+<p><a href="https://paulvanderlaken.com/">Paul van der Laken</a> just posted a much better version of the animated snow flakes:</p>
+{{% tweet "943052409043062784" %}}
+<p>I only want the best for my furry boy and his floating flat face, so I modified my initial script and added van der Laken’s snow. Here is the result:</p>
+<div class="figure">
+<img src="/static/media/better_snow_borre.gif" alt="" />
+<p class="caption"><strong><em>Figure 5.</em></strong> <em>Our flat-faced Yule cat in much better animated snow.</em></p>
+</div>
+<p>Excitement!</p>
+<hr />
+<hr />
+<p>Below you will find the code to reproduce this silly festive figure… try with a picture of your own (or somebody else’s) favorite pet!</p>
+<pre class="r"><code>##### Create Borre in the snow #####
+
+# load relevant packages
+library(tidyverse)
+library(magick)
+library(gganimate)
+
+# create snow
+# (from https://gist.github.com/ikashnitsky/657ddd6494dca6ddd23e7564234a5ff5)
+
+n &lt;- 19200 # number of snow flakes
+nframes &lt;- n / 200 # number of frames for animation
+
+snow &lt;- data.frame(
+  x = runif(n), # x coordinates
+  y = runif(n), # y coordinates
+  size = runif(n, min = 4, max = 20), # variable snow flake size
+  frames = rep(1:nframes, each = n / nframes) # number of frames
+)
+
+# non-animated plot
+snowplot &lt;- ggplot(snow, aes(x, y, size = size, frame = frames)) +
+  geom_point(color = &quot;white&quot;, pch = 42) +
+  scale_size_identity() +
+  coord_cartesian(c(0, 1), c(0, 1)) +
+  theme_void() +
+  theme(
+    panel.background = element_rect(&quot;black&quot;),
+    plot.background = element_rect(&quot;black&quot;)
+  )
+
+# The communication between ImageMagick and the &#39;magick&#39; package can be tricky.
+# In my case, &quot;convert.exe&quot; is not recognized as an internal or external command.
+# The following line takes care of that
+# (solution found on https://gis.stackexchange.com/questions/259553/problems-in-producing-animation-gif-files-in-r)
+Sys.setenv(PATH = paste(&quot;E:/R_workspace/ImageMagick-7.0.7-14/&quot;, # path where you installed ImageMagick
+  Sys.getenv(&quot;PATH&quot;),
+  sep = &quot;;&quot;
+))
+
+snowplot.gif &lt;- gganimate(snowplot, # plot to animate
+  &quot;snow.gif&quot;, # save as .gif
+  title_frame = FALSE, # do not title each image with the current frame value
+  interval = .3 # time between frames (in seconds)
+)
+
+# read back .gif using Magick
+snowplot.gif &lt;- image_read(&quot;snow.gif&quot;) # load snow
+
+yule.borre &lt;- image_read(&quot;yule_borre.png&quot;) %&gt;% # load Borre
+  image_blur(., 2, 5) # blur Borre to make him even more ethereal
+
+image_composite(snowplot.gif, # snow
+  yule.borre, # Borre
+  # put Borre in the center of the image
+  offset = paste0(
+    &quot;+&quot;, unique(image_info(snowplot.gif))$width / 6, &quot;+&quot;,
+    unique(image_info(snowplot.gif))$width / 6
+  ),
+  operator = &quot;blend&quot;, # blend the two images (allows transparency)
+  compose_args = &quot;90&quot; # transparency level
+) %&gt;%
+  image_write(., path = &quot;snow_borre.gif&quot;, format = &quot;gif&quot;) # save as .gif
+
+##################################################################################
+############################ EDIT DEC. 19TH, 2017 ################################
+##################################################################################
+
+# from https://paulvanderlaken.com/2017/12/18/generate-snow-in-r/
+# parameters
+n &lt;- 200 # number of snow flakes
+times &lt;- 100 # number of images for .gif
+xstart &lt;- runif(n, max = 1) # random flake start (x coordinates)
+ystart &lt;- runif(n, max = 1.1) # random flake start (y coordinates)
+size &lt;- runif(n, min = 4, max = 20) # variable snow flake size
+xspeed &lt;- seq(-0.02, 0.02, length.out = 100) # flake shift speeds to randomly pick from
+yspeed &lt;- runif(n, min = 0.005, max = 0.025) # random flake fall speed
+
+# create storage vectors
+xpos &lt;- rep(NA, n * times)
+ypos &lt;- rep(NA, n * times)
+
+# loop through simulations
+for (i in seq(times)) {
+  if (i == 1) {
+    # initiate values
+    xpos[1:n] &lt;- xstart
+    ypos[1:n] &lt;- ystart
+  } else {
+    # specify datapoints to update
+    first_obs &lt;- (n * i - n + 1)
+    last_obs &lt;- (n * i)
+    # update x position
+    # random shift
+    xpos[first_obs:last_obs] &lt;- xpos[(first_obs - n):(last_obs - n)] - sample(xspeed, n, TRUE)
+    # update y position
+    # lower by yspeed
+    ypos[first_obs:last_obs] &lt;- ypos[(first_obs - n):(last_obs - n)] - yspeed
+    # reset if passed bottom screen
+    xpos &lt;- ifelse(ypos &lt; -0.1, runif(n), xpos) # restart at random x
+    ypos &lt;- ifelse(ypos &lt; -0.1, 1.1, ypos) # restart just above top
+  }
+}
+
+# store in dataframe
+data_fluid &lt;- cbind.data.frame(
+  x = xpos,
+  y = ypos,
+  s = size,
+  t = rep(1:times, each = n)
+)
+
+# create animation
+better.snow &lt;- data_fluid %&gt;%
+  ggplot(aes(x, y, size = s, frame = t)) +
+  geom_point(color = &quot;white&quot;, pch = 42) +
+  scale_size_identity() +
+  coord_cartesian(c(0, 1), c(0, 1)) +
+  theme_void() +
+  theme(
+    panel.background = element_rect(&quot;black&quot;),
+    plot.background = element_rect(&quot;black&quot;)
+  )
+
+better.snowplot.gif &lt;- gganimate(better.snow, # plot to animate
+  filename = &quot;bettersnow.gif&quot;, # save as .gif
+  title_frame = FALSE, # do not title each image with the current frame value
+  interval = .1 # time between frames (in seconds)
+)
+
+# read back .gif using Magick
+better.snowplot.gif &lt;- image_read(&quot;bettersnow.gif&quot;) # load snow
+
+yule.borre &lt;- image_read(&quot;yule_borre.png&quot;) %&gt;% # load Borre
+  image_blur(., 2, 5) # blur Borre to make him even more ethereal
+
+image_composite(better.snowplot.gif, # snow
+  yule.borre, # Borre
+  # put Borre in the center of the image
+  offset = paste0(
+    &quot;+&quot;, unique(image_info(better.snowplot.gif))$width / 6, &quot;+&quot;,
+    unique(image_info(better.snowplot.gif))$width / 6
+  ),
+  operator = &quot;blend&quot;, # blend the two images (allows transparency)
+  compose_args = &quot;90&quot; # transparency level
+) %&gt;%
+  image_write(., path = &quot;better_snow_borre.gif&quot;, format = &quot;gif&quot;) # save as .gif</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Borre, a.k.a. Borremans De Struise, is a lovable and popular chap. For a while, he even had an Instagram account, but he decided to delete it due to privacy concerns.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Yeah, I like living on the edge.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Besides being quite good with <a href="https://www.gimp.org/">GIMP</a> (see <a href="https://www.facebook.com/photo.php?fbid=10214720300938055&amp;set=a.1592053558148.2090722.1140170478&amp;type=3&amp;theater">here</a> for one of her silly creations), Inez is a very, very good artist: you can follow her on <a href="https://www.facebook.com/olievlek/">Facebook</a>, visit her <a href="https://inezmgreven.wixsite.com/olievlek">website</a>, and buy her drawings &amp; paintings on <a href="https://www.etsy.com/shop/inezolievlek">Etsy</a>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
