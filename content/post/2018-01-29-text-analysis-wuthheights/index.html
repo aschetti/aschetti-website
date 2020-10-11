@@ -8,7 +8,7 @@ tags:
 - R Markdown
 - text analysis
 categories: 
-- work
+- R
 summary: "My first analysis of a document using ```tidytext```."
 output:
   blogdown::html_page:
@@ -37,7 +37,7 @@ editor_options:
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>In this blog post I will engage in something a bit more serious than playing with <a href="https://asch3tti.netlify.com/post/attractive-attractor/">static</a> or <a href="https://asch3tti.netlify.com/post/happy-holidays/">dynamic</a> images (although, admittedly, it’s a lot of fun). I will show you my first attempt at analyzing a document using the wonderful <a href="https://cran.r-project.org/web/packages/tidytext/index.html"><code>tidytext</code></a> package.</p>
+<p>In this blog post I will engage in something a bit more serious than playing with <a href="/post/2017-11-19-attractive-attractor/">static</a> or <a href="/post/2017-12-09-happy-holidays/">dynamic</a> images (although, admittedly, it’s a lot of fun). I will show you my first attempt at analyzing a document using the wonderful <a href="https://cran.r-project.org/web/packages/tidytext/index.html"><code>tidytext</code></a> package.</p>
 <p><code>tidytext</code> allows to sort the constituent elements of a text (e.g., single words or <em>n</em>-grams) following Hadley Wickham’s <a href="http://vita.had.co.nz/papers/tidy-data.pdf">tidy principles</a>:</p>
 <ul>
 <li>each variable is a column;</li>
@@ -60,7 +60,7 @@ editor_options:
 <div id="word-frequency" class="section level1">
 <h1>Word frequency</h1>
 <p>The first step was to quantify how often words were used across the 34 chapters of the novel, to have an initial idea of the content. So, I counted the number of occurrences for each word and selected only the most common ones (i.e., occurring at least 100 times).</p>
-<p><img src="/post/2018-01-29-text-analysis-wuthheights/index_files/figure-html/word_frequency-1.png" width="1152" /></p>
+<p><img src="index_files/figure-html/word_frequency-1.png" width="1152" /></p>
 <p>Unsurprisingly, the name of the protagonist is the most frequent word in the novel, with 421 occurrences. The name of the co-star also pops up: <em>Catherine Earnshaw</em> (336 occurrences). It’s quite interesting to see the word <em>Linton</em> (346 occurrences) between <em>Heathcliff</em> and <em>Catherine</em>: the two protagonists passionately love each other, but Catherine is seduced by the elegant manners of the Lintons and decides to marry <em>Edgar</em> (104 occurrences).<br />
 <em>Master</em> is another frequent word… why? Well, Heathcliff marries <em>Isabella Linton</em>, a calculated act of revenge that allows him to become the legal owner of Thrushcross Grange. Later, he forces <em>Cathy</em> (Catherine and Edgar’s daughter; 117 occurrences) and <em>Linton</em> (Heathcliff and Isabella’s son)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> to get married, thus becoming Cathy’s father-in-law. When Edgar dies, Heathcliff becomes the master of Wuthering Heights.</p>
 </div>
@@ -72,17 +72,17 @@ editor_options:
 </blockquote>
 <p>This spicy quote obviously urged me to explore what kind of emotions are conveyed by this devilish work of moral corruption. I extracted sentiment classifications from the <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC Word-Emotion Association Lexicon</a> and selected four emotions: <strong>anger</strong>, <strong>fear</strong>, <strong>joy</strong>, and <strong>sadness</strong>.<br />
 Here are the 10 most frequent words in each emotion class:</p>
-<p><img src="/post/2018-01-29-text-analysis-wuthheights/index_files/figure-html/sentiment_analysis-1.png" width="1152" /></p>
+<p><img src="index_files/figure-html/sentiment_analysis-1.png" width="1152" /></p>
 <p>Indeed, tragedy seems to be omnipresent in the life of these characters. <em>Ill</em> occurs 54 times, <em>death</em> 46 times: Catherine Earnshaw “becomes ill” when emotionally upset (which happens fairly often) and dies right after giving birth to Cathy; Linton is a sickly boy; Edgar’s physical states rapidly deteriorates, until the Grim Reaper finally claims his soul<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. The terror of physical ailments is palpable throughout the novel, and quite reasonably given the numerous <a href="https://en.wikipedia.org/wiki/Diseases_and_epidemics_of_the_19th_century">diseases</a> spreading throughout Europe in the 19th century (cholera, typhus, smallpox, …).<br />
 We can also see words considered emotionally negative but actually used in neutral ways in the novel: for instance, <em>fire</em> is categorized as conveying fear in the NRC lexicon, but Emily Brontë mostly uses it to indicate a cooking fire, a cosy fireplace, or candle light. A funny misattribution is also evident with the word <em>mistress</em>, obviously used as a form of courtesy in Wuthering Heights but rated as conveying anger in the NRC lexicon because… because… because BDSM? No idea.<br />
 Finally, the word <em>love</em> occurs 90 times. The NRC lexicon classifies it as a joyful word but I wouldn’t be so sure in this case.</p>
 <p>Just for fun, I also made a word cloud with the top 50 words categorized as positive or negative according to the lexicon by <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html">Bing Liu and collaborators</a>.</p>
-<p><img src="/post/2018-01-29-text-analysis-wuthheights/index_files/figure-html/wordcloud-1.png" width="384" /></p>
+<p><img src="index_files/figure-html/wordcloud-1.png" width="384" /></p>
 </div>
 <div id="topic-modeling" class="section level1">
 <h1>Topic modeling</h1>
 <p>Finally, I used <a href="http://videolectures.net/mlss09uk_blei_tm/">Latent Dirichlet Allocation (LDA)</a>, a popular unsupervised Bayesian classification method, to divide the terms into 2 sections, hoping to somehow pick up the different events occurring during Heathcliff’s childhood as opposed to his later years.</p>
-<p><img src="/post/2018-01-29-text-analysis-wuthheights/index_files/figure-html/LDA-1.png" width="1152" /></p>
+<p><img src="index_files/figure-html/LDA-1.png" width="1152" /></p>
 <p><em>Heathcliff</em>, <em>Catherine</em>, and the <em>Lintons</em> (especially <em>Edgar</em>) are the major characters in this book, so it’s obvious to find their names in both topics. The <em>Earnshaw</em> family seems to be more frequent in the first topic, which makes sense. In particular, the role of Mr. Earnshaw is pivotal: he is the one who travels to Liverpool, finds and adopts the orphan Heathcliff, and brings him to Wuthering Heights.<br />
 Besides characters’ names, some words seem to be more probable in one topic compared to the other. For example, <em>master</em> is more common in topic 2, because Heathcliff becomes the master of both Wuthering Heights and Thrushcross Grange later on in the novel.<br />
 So, the LDA algorithm might have picked up the intended subdivision, although it may work much more efficiently when subdividing several documents into topics (because of the larger amount of data).</p>

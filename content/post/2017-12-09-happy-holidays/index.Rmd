@@ -53,7 +53,7 @@ opts_chunk$set(
 ```
 
 
-In my first post I broke the ice by drawing mesmerizing [Clifford attractors](https://asch3tti.netlify.com/post/attractive-attractor/). My second post was supposed to be slightly more serious (e.g., something about data analysis, or what I think about the recent [alpha wars](http://sometimesimwrong.typepad.com/wrong/2017/07/alpha-wars.html)), but I have not yet had the time... and my crippling perfectionism is surely not helping.   
+In my first post I broke the ice by drawing mesmerizing [Clifford attractors](/post/2017-11-19-attractive-attractor/). My second post was supposed to be slightly more serious (e.g., something about data analysis, or what I think about the recent [alpha wars](http://sometimesimwrong.typepad.com/wrong/2017/07/alpha-wars.html)), but I have not yet had the time... and my crippling perfectionism is surely not helping.   
    
 So, what better way to procrastinate than to play with two of my favorite things in the world, **R** and our cat **Borre**[^1]?   
    

@@ -72,7 +72,7 @@ set.seed(seed.smorfia) # set seed for RNG
 
 # Introduction
 
-In this blog post I will engage in something a bit more serious than playing with [static](https://asch3tti.netlify.com/post/attractive-attractor/) or [dynamic](https://asch3tti.netlify.com/post/happy-holidays/) images (although, admittedly, it's a lot of fun). I will show you my first attempt at analyzing a document using the wonderful [```tidytext```](https://cran.r-project.org/web/packages/tidytext/index.html) package.   
+In this blog post I will engage in something a bit more serious than playing with [static](/post/2017-11-19-attractive-attractor/) or [dynamic](/post/2017-12-09-happy-holidays/) images (although, admittedly, it's a lot of fun). I will show you my first attempt at analyzing a document using the wonderful [```tidytext```](https://cran.r-project.org/web/packages/tidytext/index.html) package.   
    
 ```tidytext``` allows to sort the constituent elements of a text (e.g., single words or *n*-grams) following Hadley Wickham's [tidy principles](http://vita.had.co.nz/papers/tidy-data.pdf):
 
