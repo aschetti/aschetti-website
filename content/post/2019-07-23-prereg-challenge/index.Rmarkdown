@@ -21,7 +21,7 @@ projects: []
 
 ```{r setup, include = FALSE}
 
-knitr::opts_chunk$set(echo = TRUE)
+# Table Of Content ---------------------------------------------------------------------
 
 # custom function by Garrick Aden-Buie
 # (https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/)
