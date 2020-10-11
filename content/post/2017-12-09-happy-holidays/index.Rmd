@@ -58,11 +58,11 @@ So, what better way to procrastinate than to play with two of my favorite things
    
 I set out to create a silly image that is probably going to haunt me in my future job interviews[^2]. The initial inspiration came from a picture that my partner Inez[^3] modified for a gift we recently contributed to (yes, Lien, I'm talking about you):
 
-![***Figure 1.*** *A Borre floating in the void. He has a flat face.*](/static/media/borre.png)
+![***Figure 1.*** *A Borre floating in the void. He has a flat face.*](./borre.png)
 
 The holidays are approaching, so we thought of adding a small Christmas hat on that big head (our very own [Yule cat](https://en.wikipedia.org/wiki/Yule_Cat)):
 
-![***Figure 2.*** *Born for this look.*](/static/media/yule_borre.png)
+![***Figure 2.*** *Born for this look.*](./yule_borre.png)
 
 A simple white background was not enough. We needed something more appropriate for this period of the year... ah, yes! Snow!   
    
@@ -76,11 +76,11 @@ blogdown::shortcode('tweet', '937786580231696384')
 
 I slightly modified the code to have more snow flakes but, more importantly, I animated the plot using [```gganimate```](https://github.com/dgrtwo/gganimate):
 
-![***Figure 3.*** *Dynamic snow.*](/static/media/snow.gif)
+![***Figure 3.*** *Dynamic snow.*](./snow.gif)
 
 Finally, I used [```magick```](https://cran.r-project.org/web/packages/magick/index.html) to blur Borre's face (to make it even more ethereal) and overlay it on the animated snow:
 
-![***Figure 4.*** *Our flat-faced Yule cat in the snow.*](/static/media/snow_borre.gif)
+![***Figure 4.*** *Our flat-faced Yule cat in the snow.*](./snow_borre.gif)
 
 The end result is a big flat face fluctuating in the air, like a spooky and ominous reminder of our mortality even in these days of opulence.   
 
@@ -101,7 +101,7 @@ blogdown::shortcode('tweet', '943052409043062784')
 
 I only want the best for my furry boy and his floating flat face, so I modified my initial script and added van der Laken's snow. Here is the result:
 
-![***Figure 5.*** *Our flat-faced Yule cat in much better animated snow.*](/static/media/better_snow_borre.gif)
+![***Figure 5.*** *Our flat-faced Yule cat in much better animated snow.*](./better_snow_borre.gif)
 
 Excitement!
 
