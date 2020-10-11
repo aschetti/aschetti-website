@@ -1,17 +1,9 @@
 ---
 title: Participating in the OSF Preregistration Challenge
-# subtitle: ''
-# author: admin
-# authors: []
 authors:
 - admin
 date: "2019-07-23"
 lastmod: "2019-07-23"
-# slug: PreReg-Challenge
-output:
-  blogdown::html_page:
-    toc: yes
-    number_sections: no
 tags: 
 - open science
 - OSF
@@ -20,20 +12,25 @@ categories:
 - work
 summary: "My colleagues and I pre-registered a study via the OSF and participated in the Preregistration Challenge. Here are my thoughts."
 featured: no
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
   caption: ""
   focal_point: ""
   preview_only: no
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references 
-#   `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
 projects: []
 ---
+
+
+
+## Table of Contents
+
+- [Background](#background)
+- [A Lucky Match](#a-lucky-match)
+- [The Project](#the-project)
+- [The Preregistration Challenge ](#the-preregistration-challenge)
+    - [Preparation](#preparation)
+    - [Process](#process)
+    - [Prize](#prize)
+- [Final thoughts](#final-thoughts)
 
 # Background
 
