@@ -9,6 +9,7 @@ tags:
 - image processing
 categories: 
 - R
+summary: "A flat-faced cat wearing a Christmas hat in the snow. It doesn’t get any better than that."
 output:
   blogdown::html_page:
     toc: no
