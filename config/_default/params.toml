@@ -88,7 +88,7 @@ show_related = {docs = false, page = false, post = true, project = false, public
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "antonio.schettino@igdore.org"
+email = ""
 phone = ""
 
 # Address
