@@ -1,0 +1,173 @@
+---
+title: Attractive Attractor
+authors:
+- admin
+date: "2017-11-19"
+lastmod: "2017-11-19"
+tags: 
+- R Markdown
+- image processing
+categories: 
+- R
+summary: "Draw mesmerizing Clifford attractors in _**R**_."
+output:
+  blogdown::html_page:
+    toc: no
+    number_sections: no
+featured: no
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: yes
+projects: []
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>My first post is going to be trivial but, I think, quite mesmerizing.</p>
+<p>I avidly follow a website called <a href="www.r-bloggers.com">R-Bloggers</a>, a content aggregator where you can find daily updates of a huge variety of blogs treating a plethora of topics. I learned that, thanks to the power of <strong>R</strong>, I could be able to accomplish everything I deem important in life: creating <a href="https://www.r-bloggers.com/creat-meme-in-r/">memes</a>, making <a href="https://www.r-bloggers.com/shiny-app-for-making-pixel-art-models/">pixel art</a>, and generate <a href="https://www.r-bloggers.com/putting-the-cat-in-scatterplot/">sCATterplots</a>. On a slightly more serious note, I discovered extremely interesting blogs, like <a href="http://varianceexplained.org/"><strong><em>Variance Explained</em></strong></a>, and useful R packages, for example <a href="https://cran.r-project.org/web/packages/sjPlot/index.html"><strong><em>sjPlot</em></strong></a>.</p>
+</div>
+<div id="clifford-attractors" class="section level1">
+<h1>Clifford attractors</h1>
+<p>Recently, I stumbled upon <a href="https://fronkonstin.com/2017/11/07/drawing-10-million-points-with-ggplot-clifford-attractors/">this blog post</a> showing how to draw <a href="https://en.wikipedia.org/wiki/Clifford_A._Pickover">Clifford A. Pickover’s</a> strange attractors in R. They are defined by the following equations:</p>
+<p><span class="math display">\[ x_{n+1} = sin( \textbf{a} y_{n} ) + \textbf{c} cos( \textbf{a} x_{n} ) \]</span><br />
+<span class="math display">\[ y_{n+1} = sin( \textbf{b} x_{n} ) + \textbf{d} cos( \textbf{b} y_{n} ) \]</span></p>
+<p>The free parameters (in bold) define each attractor. When using <span class="math inline">\(\textbf{a}\)</span> = 1.5, <span class="math inline">\(\textbf{b}\)</span> = -1.8, <span class="math inline">\(\textbf{c}\)</span> = 1.6, and <span class="math inline">\(\textbf{d}\)</span> = 0.9 – sequentially through 1,000,000<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> steps – the result looks like this:</p>
+<div class="figure">
+<img src="attractor.png" alt="" />
+<p class="caption"><strong>Figure 1.</strong> <em>My first Clifford attractor.</em></p>
+</div>
+<p>This is sweet, but something is missing… perhaps there are not enough points. Let’s use 10,000,000!</p>
+<div class="figure">
+<img src="attractor_black.png" alt="" />
+<p class="caption"><strong><em>Figure 2.</em></strong> <em>A nice-looking Clifford attractor.</em></p>
+</div>
+<p>That’s more like it. Now let’s make another attractor, using 10,000,000 magenta points.</p>
+<div class="figure">
+<img src="attractor_mag.png" alt="" />
+<p class="caption"><strong><em>Figure 3.</em></strong> <em>A magenta Clifford attractor.</em></p>
+</div>
+<p>Oh yeah, that’s juicy<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<p>I’ve got an idea: let’s make a few more, and then overlay them!</p>
+<div class="figure">
+<img src="overlay.png" alt="" />
+<p class="caption"><strong><em>Figure 4.</em></strong> <em>Black, magenta, blue, and golden Clifford attractors.</em></p>
+</div>
+<p>Fantastic. This took a long time but… totally worth the effort!</p>
+<hr />
+<hr />
+<p>In case you want to waste countless hours hunting for the perfect Clifford attractor, here is the code:</p>
+<pre class="r"><code>##### CREATE A CLIFFORD ATTRACTOR #####
+
+# load packages
+library(Rcpp)
+library(ggplot2)
+library(png)
+
+# custom ggplot2 minimalist theme
+opt &lt;- theme(
+  legend.position = &quot;none&quot;,
+  panel.background = element_rect(fill = &quot;white&quot;),
+  axis.ticks = element_blank(),
+  panel.grid = element_blank(),
+  axis.title = element_blank(),
+  axis.text = element_blank()
+)
+
+# function drawing the position of each point (starting from positions x and y) using Pickover&#39;s equations
+cppFunction(&#39;DataFrame createTrajectory(int n, double x0, double y0, 
+            double a, double b, double c, double d) {
+            // create the columns
+            NumericVector x(n);
+            NumericVector y(n);
+            x[0]=x0;
+            y[0]=y0;
+            for(int i = 1; i &lt; n; ++i) {
+            x[i] = sin(a*y[i-1])+c*cos(a*x[i-1]);
+            y[i] = sin(b*x[i-1])+d*cos(b*y[i-1]);
+            }
+            // return a new data frame
+            return DataFrame::create(_[&quot;x&quot;]= x, _[&quot;y&quot;]= y);
+            }
+            &#39;)
+
+# assign values to free parameters
+# black attractor
+a &lt;- 1.5
+b &lt;- -1.8
+c &lt;- 1.6
+d &lt;- 0.9
+# # magenta attractor
+# a &lt;- -1.4
+# b &lt;- 1.6
+# c &lt;- 1.0
+# d &lt;- 0.7
+# # blue attractor
+# a &lt;- -1.8
+# b &lt;- 1.8
+# c &lt;- 0.9
+# d &lt;- 0.7
+# # gold attractor
+# a &lt;- -1.2
+# b &lt;- 1.7
+# c &lt;- 0.9
+# d &lt;- 0.6
+
+df &lt;- createTrajectory(10000000, 0, 0, a, b, c, d) # calculate the coordinates of 10,000,000 points (starting from position [x = 0, y = 0]
+attractor &lt;- ggplot(df, aes(x, y)) +
+  geom_point(color = &quot;black&quot;, shape = 46, alpha = .01) +
+  opt # create the graph
+# magenta attractor: color=&quot;#e017e0&quot;
+# blue attractor: color=&quot;#2570da&quot;
+# gold attractor: color=&quot;#cd7f32&quot;
+
+# save as .png
+png(&quot;attractor.png&quot;, units = &quot;px&quot;, width = 1600, height = 1600, res = 300)
+attractor
+dev.off() # close device
+
+##### OVERLAY ATTRACTORS #####
+
+# load packages
+library(grid)
+library(gridExtra)
+
+# assuming attractors are saved in separate .png files...
+# load images
+attractor.black &lt;- readPNG(&quot;attractor_black.png&quot;)
+attractor.mag &lt;- readPNG(&quot;attractor_mag.png&quot;)
+attractor.blue &lt;- readPNG(&quot;attractor_blue.png&quot;)
+attractor.gold &lt;- readPNG(&quot;attractor_gold.png&quot;)
+
+# convert to raster
+# (play with the alpha levels to modify transparency)
+attractor.black.raster &lt;- matrix(rgb(attractor.black[, , 1], attractor.black[, , 2], attractor.black[, , 3], alpha = 1), nrow = dim(attractor.black)[1])
+attractor.mag.raster &lt;- matrix(rgb(attractor.mag[, , 1], attractor.mag[, , 2], attractor.mag[, , 3], alpha = .6), nrow = dim(attractor.mag)[1])
+attractor.blue.raster &lt;- matrix(rgb(attractor.blue[, , 1], attractor.blue[, , 2], attractor.blue[, , 3], alpha = .6), nrow = dim(attractor.blue)[1])
+attractor.gold.raster &lt;- matrix(rgb(attractor.gold[, , 1], attractor.gold[, , 2], attractor.gold[, , 3], alpha = .6), nrow = dim(attractor.gold)[1])
+
+# overlay all images as different static annotations in a ggplot2 object
+overlay &lt;- ggplot(data.frame()) +
+  annotation_custom(rasterGrob(attractor.black.raster)) +
+  annotation_custom(rasterGrob(attractor.mag.raster)) +
+  annotation_custom(rasterGrob(attractor.blue.raster)) +
+  annotation_custom(rasterGrob(attractor.gold.raster)) +
+  opt
+
+# save as .png
+png(&quot;overlay.png&quot;, units = &quot;px&quot;, width = 1600, height = 1600, res = 300)
+overlay
+dev.off()
+dev.off()</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><img src="https://www.reactiongifs.com/r/1m.gif" title="fig:" alt="One Million!" /><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>For other captivating examples, see <a href="https://paulbourke.net/fractals/clifford/">here</a>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
