@@ -21,7 +21,7 @@ organizations:
 bio: Open science, R, Bayes. Oh, and cats.
 
 interests:
-- open science
+- Open Science
 - R
 - MATLAB
 - Bayes
