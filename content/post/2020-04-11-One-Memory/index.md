@@ -9,7 +9,7 @@ tags:
 categories: 
 - personal
 date: "2020-04-11"
-lastMod: ""
+lastMod: "2020-04-11"
 featured: false
 draft: false
 
