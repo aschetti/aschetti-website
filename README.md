@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6970a7f-8f14-4cc9-905b-310db159dba8/deploy-status)](https://app.netlify.com/sites/antonio-schettino/deploys)
 
 # Not Worth More Than a Bare Mention
 
@@ -5,13 +6,3 @@ Source code of my personal website, developed with [Hugo](https://themes.gohugo.
 
 ***
 ***
-
-
-
-
-To check: Netlify badge on top of README (example: https://github.com/apreshill/share-blogdown/blob/master/README.md)
-
-Code:
-```
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2c32a840-d789-4a47-b5b4-953a724828cc/deploy-status)](https://app.netlify.com/sites/share-blogdown/deploys)
-```
