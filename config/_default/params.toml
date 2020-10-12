@@ -124,7 +124,7 @@ appointment_url = ""
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/media/` folder and specify image name here.
-sharing_image = "attractor_black.jpg"
+sharing_image = "hairy_rings_pink.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = "asch3tti"
