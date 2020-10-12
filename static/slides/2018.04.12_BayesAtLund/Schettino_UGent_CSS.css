@@ -1,0 +1,176 @@
+/*************************************************
+*  A custom theme for slides
+*  Set `css: ["Schettino_UGent_CSS.css"]` in yaml header.
+**************************************************/
+
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 0px solid #23373B;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.inverse {
+  background-color: #23373B;
+  text-shadow: none;
+}
+
+.remark-slide-content > h1 {
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  font-size: 45px;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: black;
+}
+
+.remark-slide-content > inverse {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  position: absolute;
+}
+
+.remark-slide-content > h2 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.remark-slide-content > h3 {
+  padding-top: -15px;
+  padding-bottom: 10px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.title-slide {
+  background-color: #FAFAFA;
+  border-top: 80px solid #FAFAFA;
+}
+
+.title-slide > h1  {
+  background: url(logos.png) no-repeat;
+  background-position: top;
+  position: fixed;
+  top: 110px;
+  left: -10px;
+  height: 100px;
+  width: 99%;
+  color: #1A292C;
+  font-size: 50px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 15px;
+  padding-top: 200px;
+}
+
+.title-slide > h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.title-slide > h3  {
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom: -150px;
+}
+
+.remark-slide-number {
+  display: none; /*      # uncomment to display slide numbers
+  font-size: 13pt;
+  font-family: 'Ubuntu';
+  color: #272822;
+  opacity: 1; */
+}
+
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  font-family: 'Ubuntu';
+  color: #FAFAFA;
+  opacity: 1;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
+}
+
+/* add header */
+div.my-header {
+  background-color: #FAFAFA;
+  background: url(logos.png) no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 100%;
+}
+
+/* add footer */
+div.my-footer {
+  background-color: #3348ed;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+}
+
+div.my-footer span {
+  font-size: 10pt;
+  color: #F7F8FA;
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+}
+
+@page {
+/*  size: 1210px 681px; /* 16:9 ratio */
+  size: 1024px 768px; /* 4:3 ratio */
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
