@@ -4,11 +4,8 @@ authors:
 - admin
 date: "2018-01-29"
 lastmod: "2018-01-29"
-tags: 
-- R Markdown
-- text analysis
-categories: 
-- R
+tags: ["R Markdown", "text analysis"]
+categories: ["R"]
 summary: "My first analysis of a document using ```tidytext```."
 output:
   blogdown::html_page:

@@ -4,10 +4,8 @@ subtitle:
 summary: Remembering Jon Tennant.
 authors:
 - admin
-tags: 
-- people
-categories: 
-- personal
+tags: ["people"]
+categories: ["personal"]
 date: "2020-04-11"
 lastMod: "2020-04-11"
 featured: false

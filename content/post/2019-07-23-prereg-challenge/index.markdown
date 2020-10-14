@@ -4,12 +4,8 @@ authors:
 - admin
 date: "2019-07-23"
 lastmod: "2019-07-23"
-tags: 
-- open science
-- OSF
-- preregistration
-categories: 
-- work
+tags: ["OSF", "preregistration"]
+categories: ["open science"]
 summary: "My colleagues and I pre-registered a study via the OSF and participated in the Preregistration Challenge. Here are my thoughts."
 featured: no
 image:
