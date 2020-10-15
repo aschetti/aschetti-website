@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'NSF 19-501 AccelNet Proposal: Community of Open Scholarship Grassroots Networks
-  (COSGN)'
+title: 'NSF 19-501 AccelNet Proposal: Community of Open Scholarship Grassroots Networks (COSGN)'
 subtitle: ''
 summary: ''
 authors:
@@ -154,19 +153,8 @@ projects: []
 publishDate: '2020-10-10T14:08:58.407853Z'
 publication_types:
 - '4'
-abstract: The Community of Open Scholarship Grassroots Networks (COSGN), includes
-  120 grassroots networks, representing virtually every region of the world and every
-  research discipline. These networks communicate and coordinate on topics of common
-  interest. We propose, using an NSF 19-501 Full-Scale implementation grant, to formalize
-  governance and coordination of the networks to maximize impact and establish standard
-  practices for sustainability. In the project period, we will increase the capacity
-  of COSGN to advance the research and community goals of the participating networks
-  individually and collectively, and establish governance, succession planning, shared
-  resources, andcommunication pathways to ensure an active, community-sustained network
-  of networks. By the end of the project period, we will have established a self-sustaining
-  network of networks that leverages disciplinary and regional diversity, actively
-  collaborates across networks for grassroots organizing, and shares resources for
-  maximum impact on culture change for open scholarship.
+abstract: 'The Community of Open Scholarship Grassroots Networks (COSGN), includes 120 grassroots networks, representing virtually every region of the world and every
+  research discipline. These networks communicate and coordinate on topics of common interest. We propose, using an NSF 19-501 Full-Scale implementation grant, to formalize governance and coordination of the networks to maximize impact and establish standard practices for sustainability. In the project period, we will increase the capacity of COSGN to advance the research and community goals of the participating networks individually and collectively, and establish governance, succession planning, shared resources, andcommunication pathways to ensure an active, community-sustained network of networks. By the end of the project period, we will have established a self-sustaining network of networks that leverages disciplinary and regional diversity, actively collaborates across networks for grassroots organizing, and shares resources for maximum impact on culture change for open scholarship.'
 publication: ''
 doi: 10.31222/osf.io/d7mwk
 ---

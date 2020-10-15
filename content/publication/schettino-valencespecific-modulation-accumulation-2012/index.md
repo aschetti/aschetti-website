@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Valence-Specific Modulation in the Accumulation of Perceptual Evidence Prior
-  to Visual Scene Recognition
+title: 'Valence-Specific Modulation in the Accumulation of Perceptual Evidence Prior to Visual Scene Recognition'
 subtitle: ''
 summary: ''
 authors:
@@ -44,21 +43,7 @@ projects: []
 publishDate: '2020-10-10T14:08:59.435299Z'
 publication_types:
 - '2'
-abstract: Visual scene recognition is a dynamic process through which incoming sensory
-  information is iteratively compared with predictions regarding the most likely identity
-  of the input stimulus. In this study, we used a novel progressive unfolding task
-  to characterize the accumulation of perceptual evidence prior to scene recognition,
-  and its potential modulation by the emotional valence of these scenes. Our results
-  show that emotional (pleasant and unpleasant) scenes led to slower accumulation
-  of evidence compared to neutral scenes. In addition, when controlling for the potential
-  contribution of non-emotional factors (i.e., familiarity and complexity of the pictures),
-  our results confirm a reliable shift in the accumulation of evidence for pleasant
-  relative to neutral and unpleasant scenes, suggesting a valence-specific effect.
-  These findings indicate that proactive iterations between sensory processing and
-  top-down predictions during scene recognition are reliably influenced by the rapidly
-  extracted (positive) emotional valence of the visual stimuli. We interpret these
-  findings in accordance with the notion of a genuine positivity offset during emotional
-  scene recognition.
+abstract: 'Visual scene recognition is a dynamic process through which incoming sensory information is iteratively compared with predictions regarding the most likely identity of the input stimulus. In this study, we used a novel progressive unfolding task to characterize the accumulation of perceptual evidence prior to scene recognition, and its potential modulation by the emotional valence of these scenes. Our results show that emotional (pleasant and unpleasant) scenes led to slower accumulation of evidence compared to neutral scenes. In addition, when controlling for the potential contribution of non-emotional factors (i.e., familiarity and complexity of the pictures), our results confirm a reliable shift in the accumulation of evidence for pleasant relative to neutral and unpleasant scenes, suggesting a valence-specific effect. These findings indicate that proactive iterations between sensory processing and top-down predictions during scene recognition are reliably influenced by the rapidly extracted (positive) emotional valence of the visual stimuli. We interpret these findings in accordance with the notion of a genuine positivity offset during emotional scene recognition.'
 publication: '*PloS One*'
 doi: 10.1371/journal.pone.0038064
 ---

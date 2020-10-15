@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'Brain Dynamics of Upstream Perceptual Processes Leading to Visual Object Recognition:
-  A High Density ERP Topographic Mapping Study'
+title: 'Brain Dynamics of Upstream Perceptual Processes Leading to Visual Object Recognition: A High Density ERP Topographic Mapping Study'
 subtitle: ''
 summary: ''
 authors:
@@ -59,26 +58,7 @@ projects: []
 publishDate: '2020-10-10T14:08:58.671599Z'
 publication_types:
 - '2'
-abstract: 'Recent studies suggest that visual object recognition is a proactive process
-  through which perceptual evidence accumulates over time before a decision can be
-  made about the object. However, the exact electrophysiological correlates and time-course
-  of this complex process remain unclear. In addition, the potential influence of
-  emotion on this process has not been investigated yet. We recorded high density
-  EEG in healthy adult participants performing a novel perceptual recognition task.
-  For each trial, an initial blurred visual scene was first shown, before the actual
-  content of the stimulus was gradually revealed by progressively adding diagnostic
-  high spatial frequency information. Participants were asked to stop this stimulus
-  sequence as soon as they could correctly perform an animacy judgment task. Behavioral
-  results showed that participants reliably gathered perceptual evidence before recognition.
-  Furthermore, prolonged exploration times were observed for pleasant, relative to
-  either neutral or unpleasant scenes. ERP results showed distinct effects starting
-  at 280 ms post-stimulus onset in distant brain regions during stimulus processing,
-  mainly characterized by: (i) a monotonic accumulation of evidence, involving regions
-  of the posterior cingulate cortex/parahippocampal gyrus, and (ii) true categorical
-  recognition effects in medial frontal regions, including the dorsal anterior cingulate
-  cortex. These findings provide evidence for the early involvement, following stimulus
-  onset, of non-overlapping brain networks during proactive processes eventually leading
-  to visual object recognition.'
+abstract: 'Recent studies suggest that visual object recognition is a proactive process through which perceptual evidence accumulates over time before a decision can be made about the object. However, the exact electrophysiological correlates and time-course of this complex process remain unclear. In addition, the potential influence of emotion on this process has not been investigated yet. We recorded high density EEG in healthy adult participants performing a novel perceptual recognition task. For each trial, an initial blurred visual scene was first shown, before the actual content of the stimulus was gradually revealed by progressively adding diagnostic high spatial frequency information. Participants were asked to stop this stimulus sequence as soon as they could correctly perform an animacy judgment task. Behavioral results showed that participants reliably gathered perceptual evidence before recognition. Furthermore, prolonged exploration times were observed for pleasant, relative to either neutral or unpleasant scenes. ERP results showed distinct effects starting at 280 ms post-stimulus onset in distant brain regions during stimulus processing, mainly characterized by: (i) a monotonic accumulation of evidence, involving regions of the posterior cingulate cortex/parahippocampal gyrus, and (ii) true categorical recognition effects in medial frontal regions, including the dorsal anterior cingulate cortex. These findings provide evidence for the early involvement, following stimulus onset, of non-overlapping brain networks during proactive processes eventually leading to visual object recognition.'
 publication: '*NeuroImage*'
 doi: 10.1016/j.neuroimage.2011.01.009
 ---

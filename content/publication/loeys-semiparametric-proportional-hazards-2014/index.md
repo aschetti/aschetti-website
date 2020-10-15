@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Semi-Parametric Proportional Hazards Models with Crossed Random Effects for
-  Psychometric Response Times
+title: 'Semi-Parametric Proportional Hazards Models with Crossed Random Effects for Psychometric Response Times'
 subtitle: ''
 summary: ''
 authors:
@@ -49,15 +48,7 @@ projects: []
 publishDate: '2020-10-10T14:08:58.130578Z'
 publication_types:
 - '2'
-abstract: 'The semi-parametric proportional hazards model with crossed random effects
-  has two important characteristics: it avoids explicit specification of the response
-  time distribution by using semi-parametric models, and it captures heterogeneity
-  that is due to subjects and items. The proposed model has a proportionality parameter
-  for the speed of each test taker, for the time intensity of each item, and for subject
-  or item characteristics of interest. It is shown how all these parameters can be
-  estimated by Markov chain Monte Carlo methods (Gibbs sampling). The performance
-  of the estimation procedure is assessed with simulations and the model is further
-  illustrated with the analysis of response times from a visual recognition task.'
+abstract: 'The semi-parametric proportional hazards model with crossed random effects has two important characteristics: it avoids explicit specification of the response time distribution by using semi-parametric models, and it captures heterogeneity that is due to subjects and items. The proposed model has a proportionality parameter for the speed of each test taker, for the time intensity of each item, and for subject or item characteristics of interest. It is shown how all these parameters can be estimated by Markov chain Monte Carlo methods (Gibbs sampling). The performance of the estimation procedure is assessed with simulations and the model is further illustrated with the analysis of response times from a visual recognition task.'
 publication: '*The British Journal of Mathematical and Statistical Psychology*'
 doi: 10.1111/bmsp.12020
 ---
