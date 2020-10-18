@@ -2,7 +2,7 @@
 title: "Involuntary attentional orienting in the absence of awareness speeds up early sensory processing"
 summary: Materials, data, analysis scripts, and preprint of the study reported in [this paper](https://doi.org/10.1016/j.cortex.2015.10.016).
 tags:
-- attention
+- Attention
 - EEG
 - ERP
 - TOJ

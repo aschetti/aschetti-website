@@ -2,8 +2,8 @@
 title: "Shedding light on emotional perception: Interaction of brightness and semantic content in extrastriate visual cortex"
 summary: Materials, data, analysis scripts, and preprint of the study reported in [this paper](https://doi.org/10.1016/j.neuroimage.2016.03.020).
 tags:
-- attention
-- emotion
+- Attention
+- Emotion
 - EEG
 - ERP
 - BF

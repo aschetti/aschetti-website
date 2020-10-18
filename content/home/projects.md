@@ -26,16 +26,16 @@ subtitle = ""
     tag = "*"
   
   [[content.filter_button]]
-    name = "attention"
-    tag = "attention"
+    name = "Attention"
+    tag = "Attention"
   
   [[content.filter_button]]
-    name = "emotion"
-    tag = "emotion"
+    name = "Emotion"
+    tag = "Emotion"
 
   [[content.filter_button]]
-    name = "prediction"
-    tag = "prediction"
+    name = "Prediction"
+    tag = "Prediction"
 
   [[content.filter_button]]
     name = "Temporal Order Judgment"

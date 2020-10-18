@@ -2,8 +2,8 @@
 title: "Electrophysiological correlates of the interplay between low-level visual features and emotional content during word reading"
 summary: Preregistration, materials, data, analysis scripts, and preprint of the study reported in [this paper](https://doi.org/10.1038/s41598-018-30701-5).
 tags:
-- attention
-- emotion
+- Attention
+- Emotion
 - EEG
 - ERP
 - BF

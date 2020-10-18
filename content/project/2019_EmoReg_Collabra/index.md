@@ -2,8 +2,8 @@
 title: "Rapid extraction of emotion regularities from complex scenes in the human brain"
 summary: Materials, data, analysis scripts, and preprint of the study reported in [this paper](https://doi.org/10.1525/collabra.226).
 tags:
-- attention
-- emotion
+- Attention
+- Emotion
 - EEG
 - ssVEP
 - BF

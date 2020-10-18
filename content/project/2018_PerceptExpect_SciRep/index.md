@@ -2,8 +2,8 @@
 title: "Attentional gain is modulated by probabilistic feature expectations in a spatial cueing task: ERP evidence"
 summary: Raw EEG, eye-tracking, and behavioral data of the study reported in [this paper](https://doi.org/10.1038/s41598-017-18347-1).
 tags:
-- attention
-- prediction
+- Attention
+- Prediction
 - EEG
 - ERP
 - BF

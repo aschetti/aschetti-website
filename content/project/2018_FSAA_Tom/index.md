@@ -2,8 +2,8 @@
 title: "Feature-Specific Attention Allocation and Rapid orienting to fearful faces"
 summary: Data and preprint of an unpublished EEG study investigating feature-specific attention allocation in the context of attention to fear.
 tags:
-- attention
-- emotion
+- Attention
+- Emotion
 - EEG
 - ERP
 - BF

@@ -2,7 +2,7 @@
 title: "Dynamic interplay between reward and voluntary attention determines stimulus processing in visual cortex"
 summary: Data, analysis scripts, and preprint of the study submitted for publication.
 tags:
-- attention
+- Attention
 - EEG
 - ssVEP
 - brms

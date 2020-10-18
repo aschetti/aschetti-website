@@ -2,8 +2,8 @@
 title: "Rapid processing of neutral and angry expressions within ongoing facial stimulus streams: Is it all about isolated facial features?"
 summary: Materials, data, analysis scripts, and preprint of the study reported in [this paper](https://doi.org/10.1371/journal.pone.0231982).
 tags:
-- attention
-- emotion
+- Attention
+- Emotion
 - EEG
 - ssVEP
 - brms
