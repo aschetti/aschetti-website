@@ -8,10 +8,14 @@ authors:
 - M. Paul
 - G. Govaart
 - A. Schettino
-tags: []
+tags:
+- '"EEG"'
+- '"ERP"'
+- '"open science"'
+- '"preregistration"'
 categories: []
-date: '2020-11-04'
-lastmod: 2020-11-16T17:06:28+01:00
+date: '2021-03-04'
+lastmod: 2021-03-04T16:00:0+02:00
 featured: false
 draft: false
 
@@ -29,10 +33,10 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-11-04'
+publishDate: '2021-03-04'
 publication_types:
-- '4'
-abstract: 'A combination of confirmation bias, hindsight bias, and pressure to publish may prompt the (unconscious) exploration of various methodological options and reporting only the ones that lead to a (statistically) significant outcome. This undisclosed analytic flexibility is particularly relevant in EEG research, where a myriad of preprocessing and analysis pipelines can be used to extract information from complex multidimensional data. One solution to limit confirmation and hindsight bias by disclosing analytic choices is preregistration: researchers write a time-stamped, publicly accessible research plan with hypotheses, data collection plan, and intended preprocessing and statistical analyses before the start of a research project. In this manuscript, we present an overview of the problems associated with undisclosed analytic flexibility, discuss why and how EEG researchers would benefit from adopting preregistration, provide guidelines and examples on how to preregister data preprocessing and analysis steps in typical ERP studies, and conclude by discussing possibilities and limitations of this open science practice.'
-publication: ''
-doi: 10.31234/osf.io/4tgve
+- '2'
+abstract: 'A combination of confirmation bias, hindsight bias, and pressure to publish may prompt the (unconscious) exploration of various methodological options and reporting only the ones that lead to a (statistically) significant outcome. This *undisclosed analytic flexibility* is particularly relevant in EEG research, where a myriad of preprocessing and analysis pipelines can be used to extract information from complex multidimensional data. One solution to limit confirmation and hindsight bias by disclosing analytic choices is *preregistration*: researchers write a time-stamped, publicly accessible research plan with hypotheses, data collection plan, and intended preprocessing and statistical analyses before the start of a research project. In this manuscript, we present an overview of the problems associated with undisclosed analytic flexibility, discuss why and how EEG researchers would benefit from adopting preregistration, provide guidelines and examples on how to preregister data preprocessing and analysis steps in typical ERP studies, and conclude by discussing possibilities and limitations of this open science practice.'
+publication: '*International Journal of Psychophysiology*'
+doi: 10/gh7zr7
 ---
