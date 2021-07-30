@@ -33,7 +33,7 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * create platforms for easy communication between members of the community
+  * facilitate communication between researchers and support staff
   * organize events and workshops
   * promote open science activities on social media
   * support individuals and research groups with day-to-day activities
