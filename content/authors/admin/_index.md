@@ -51,7 +51,7 @@ social:
   link: https://twitter.com/asch3tti/
 - icon: orcid
   icon_pack: ai
-  link: https://orcid.org/0000-0001-8065-6082/
+  link: https://orcid.org/0000-0001-8065-6082
 - icon: github
   icon_pack: fab
   link: https://github.com/aschetti/
