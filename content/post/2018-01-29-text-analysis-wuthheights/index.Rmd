@@ -26,6 +26,7 @@ editor_options:
 # install packages ------------------------------------------------------------------
 
 # install.packages("knitr")
+# install.packages("here")
 # install.packages("tidytext")
 # install.packages("gutenbergr")
 # install.packages("tidyverse")
@@ -39,6 +40,7 @@ editor_options:
 # load packages ------------------------------------------------------------------
 
 library(knitr)
+library(here)
 library(tidytext)
 library(gutenbergr)
 library(tidyverse)
@@ -62,8 +64,8 @@ opts_chunk$set(
 # analysis ------------------------------------------------------------------
 
 # set seed for LDA model
-seed.smorfia <- 67 # 'O purpo int'a chitarra
-set.seed(seed.smorfia) # set seed for RNG
+seed_smorfia <- 67 # 'O purpo int'a chitarra
+set.seed(seed_smorfia) # set seed for RNG
 
 ```
 
@@ -97,8 +99,8 @@ The first step was to quantify how often words were used across the 34 chapters 
 
 ```{r word_frequency}
 
-WH.ID <- filter(gutenberg_metadata, author == "Brontë, Emily") # extract metadata for Emily Brontë's "Wuthering Heights"
-WH <- gutenberg_download(WH.ID$gutenberg_id) %>% # download text
+WH_ID <- filter(gutenberg_metadata, author == "Brontë, Emily") # extract metadata for Emily Brontë's "Wuthering Heights"
+WH <- gutenberg_download(WH_ID$gutenberg_id) %>% # download text
   unnest_tokens(word, text) %>% # split text into individual words
   anti_join(stop_words) # eliminate stop words (e.g., "the", "of", "to", ...)
 
@@ -132,8 +134,8 @@ WH %>%
 
 ```
 
-Unsurprisingly, the name of the protagonist is the most frequent word in the novel, with `r as.double(count(WH, word, sort=TRUE)[1, "n"])` occurrences. The name of the co-star also pops up: *Catherine Earnshaw* (`r as.double(count(WH, word, sort=TRUE)[3, "n"])` occurrences). It's quite interesting to see the word *Linton* (`r as.double(count(WH, word, sort=TRUE)[2, "n"])` occurrences) between *Heathcliff* and *Catherine*: the two protagonists passionately love each other, but Catherine is seduced by the elegant manners of the Lintons and decides to marry *Edgar* (`r as.double(count(WH, word, sort=TRUE)[20, "n"])` occurrences).   
-*Master* is another frequent word... why? Well, Heathcliff marries *Isabella Linton*, a calculated act of revenge that allows him to become the legal owner of Thrushcross Grange. Later, he forces *Cathy* (Catherine and Edgar's daughter; `r as.double(count(WH, word, sort=TRUE)[13, "n"])` occurrences) and *Linton* (Heathcliff and Isabella's son)[^2] to get married, thus becoming Cathy's father-in-law. When Edgar dies, Heathcliff becomes the master of Wuthering Heights.
+Unsurprisingly, the name of the protagonist is the most frequent word in the novel, with `r as.double(count(WH, word, sort = TRUE)[1, "n"])` occurrences. The name of the co-star also pops up: *Catherine Earnshaw* (`r as.double(count(WH, word, sort = TRUE)[3, "n"])` occurrences). It's quite interesting to see the word *Linton* (`r as.double(count(WH, word, sort = TRUE)[2, "n"])` occurrences) between *Heathcliff* and *Catherine*: the two protagonists passionately love each other, but Catherine is seduced by the elegant manners of the Lintons and decides to marry *Edgar* (`r as.double(count(WH, word, sort = TRUE)[20, "n"])` occurrences).   
+*Master* is another frequent word... why? Well, Heathcliff marries *Isabella Linton*, a calculated act of revenge that allows him to become the legal owner of Thrushcross Grange. Later, he forces *Cathy* (Catherine and Edgar's daughter; `r as.double(count(WH, word, sort = TRUE)[13, "n"])` occurrences) and *Linton* (Heathcliff and Isabella's son)[^2] to get married, thus becoming Cathy's father-in-law. When Edgar dies, Heathcliff becomes the master of Wuthering Heights.
 
 # Sentiment analysis
 
@@ -147,19 +149,19 @@ Here are the 10 most frequent words in each emotion class:
 ```{r sentiment_analysis}
 
 # get sentiment classifications from the NRC lexicon
-nrc.emo <- get_sentiments("nrc") %>%
+nrc_emo <- get_sentiments("nrc") %>%
   filter(sentiment == "joy" |
     sentiment == "anger" |
     sentiment == "fear" |
     sentiment == "sadness")
 
-WH.emo <- WH %>%
-  inner_join(nrc.emo) %>% # match words and sentiments
+WH_emo <- WH %>%
+  inner_join(nrc_emo) %>% # match words and sentiments
   count(word, sentiment) %>% # count occurrences while keeping sentiment information
   arrange(sentiment) # sort according to sentiment
 
 # what are the most common words split into joy, anger, fear, and sadness?
-WH.emo %>%
+WH_emo %>%
   group_by(sentiment) %>%
   top_n(10) %>% # take the top 10 words for each sentiment class
   ungroup() %>%
@@ -190,9 +192,9 @@ WH.emo %>%
 
 ```
 
-Indeed, tragedy seems to be omnipresent in the life of these characters. *Ill* occurs `r as.double(WH.emo[249, "n"])` times, *death* `r as.double(WH.emo[109, "n"])` times: Catherine Earnshaw "becomes ill" when emotionally upset (which happens fairly often) and dies right after giving birth to Cathy; Linton is a sickly boy; Edgar's physical states rapidly deteriorates, until the Grim Reaper finally claims his soul[^3]. The terror of physical ailments is palpable throughout the novel, and quite reasonably given the numerous [diseases](https://en.wikipedia.org/wiki/Diseases_and_epidemics_of_the_19th_century) spreading throughout Europe in the 19th century (cholera, typhus, smallpox, ...).   
+Indeed, tragedy seems to be omnipresent in the life of these characters. *Ill* occurs `r as.double(WH_emo[249, "n"])` times, *death* `r as.double(WH_emo[109, "n"])` times: Catherine Earnshaw "becomes ill" when emotionally upset (which happens fairly often) and dies right after giving birth to Cathy; Linton is a sickly boy; Edgar's physical states rapidly deteriorates, until the Grim Reaper finally claims his soul[^3]. The terror of physical ailments is palpable throughout the novel, and quite reasonably given the numerous [diseases](https://en.wikipedia.org/wiki/Diseases_and_epidemics_of_the_19th_century) spreading throughout Europe in the 19th century (cholera, typhus, smallpox, ...).   
 We can also see words considered emotionally negative but actually used in neutral ways in the novel: for instance, *fire* is categorized as conveying fear in the NRC lexicon, but Emily Brontë mostly uses it to indicate a cooking fire, a cosy fireplace, or candle light. A funny misattribution is also evident with the word *mistress*, obviously used as a form of courtesy in Wuthering Heights but rated as conveying anger in the NRC lexicon because... because... because BDSM? No idea.   
-Finally, the word *love* occurs `r as.double(WH.emo[1251, "n"])` times. The NRC lexicon classifies it as a joyful word but I wouldn't be so sure in this case.   
+Finally, the word *love* occurs `r as.double(WH_emo[1251, "n"])` times. The NRC lexicon classifies it as a joyful word but I wouldn't be so sure in this case.   
    
 Just for fun, I also made a word cloud with the top 50 words categorized as positive or negative according to the lexicon by [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html).
 
@@ -218,7 +220,7 @@ Finally, I used [Latent Dirichlet Allocation (LDA)](http://videolectures.net/mls
 ```{r LDA}
 
 # prepare data for topic modeling
-WH.DocumentTermMatrix <- WH %>%
+WH_DocumentTermMatrix <- WH %>%
   count(word, sort = TRUE) %>% # count number of occurrences of each word
   mutate(
     book = "Wuthering Heights", # add book name (necessary for cast_dtm)
@@ -227,12 +229,12 @@ WH.DocumentTermMatrix <- WH %>%
   cast_dtm(book, word, n) # one term per row
 
 # Latent Dirichlet Allocation
-WH.LDA <- LDA(WH.DocumentTermMatrix,
+WH_LDA <- LDA(WH_DocumentTermMatrix,
   k = 2, # before/after Heathcliff runs away from Wuthering Heights?
-  control = list(seed = seed.smorfia) # set seed for RNG
+  control = list(seed = seed_smorfia) # set seed for RNG
 )
 
-WH.LDA.topics <- tidy(WH.LDA, matrix = "beta") %>% # extract beta coefficients from model
+WH_LDA_topics <- tidy(WH_LDA, matrix = "beta") %>% # extract beta coefficients from model
   group_by(topic) %>%
   top_n(10, beta) %>% # take the top 10 words for each topic
   ungroup() %>%
@@ -244,7 +246,7 @@ WH.LDA.topics <- tidy(WH.LDA, matrix = "beta") %>% # extract beta coefficients f
     )
   )
 
-ggplot(WH.LDA.topics, aes(term, beta, fill = factor(topic))) + # plot
+ggplot(WH_LDA_topics, aes(term, beta, fill = factor(topic))) + # plot
   geom_col(color = "black", size = .7, show.legend = FALSE) + # bars
   scale_y_continuous(breaks = seq(0, .015, .005)) + # x-axis: tick marks
   geom_hline(
@@ -290,8 +292,8 @@ library(topicmodels)
 library(ggthemes)
 library(viridis)
 
-WH.ID <- filter(gutenberg_metadata, author == "Brontë, Emily") # extract metadata for Emily Brontë's "Wuthering Heights"
-WH <- gutenberg_download(WH.ID$gutenberg_id) %>% # download text
+WH_ID <- filter(gutenberg_metadata, author == "Brontë, Emily") # extract metadata for Emily Brontë's "Wuthering Heights"
+WH <- gutenberg_download(WH_ID$gutenberg_id) %>% # download text
   unnest_tokens(word, text) %>% # split text into individual words
   anti_join(stop_words) # eliminate stop words (e.g., "the", "of", "to", ...)
 
@@ -332,19 +334,19 @@ WH %>%
 ##################################################################################
 
 # get sentiment classifications from the NRC lexicon
-nrc.emo <- get_sentiments("nrc") %>%
+nrc_emo <- get_sentiments("nrc") %>%
   filter(sentiment == "joy" |
     sentiment == "anger" |
     sentiment == "fear" |
     sentiment == "sadness")
 
-WH.emo <- WH %>%
-  inner_join(nrc.emo) %>% # match words and sentiments
+WH_emo <- WH %>%
+  inner_join(nrc_emo) %>% # match words and sentiments
   count(word, sentiment) %>% # count occurrences while keeping sentiment information
   arrange(sentiment) # sort according to sentiment
 
 # what are the most common words split into joy, anger, fear, and sadness?
-WH.emo %>%
+WH_emo %>%
   group_by(sentiment) %>%
   top_n(10) %>% # take the top 10 words for each sentiment class
   ungroup() %>%
@@ -390,7 +392,7 @@ WH %>%
 ##################################################################################
 
 # prepare data for topic modeling
-WH.DocumentTermMatrix <- WH %>%
+WH_DocumentTermMatrix <- WH %>%
   count(word, sort = TRUE) %>% # count number of occurrences of each word
   mutate(
     book = "Wuthering Heights", # add book name (necessary for cast_dtm)
@@ -399,12 +401,12 @@ WH.DocumentTermMatrix <- WH %>%
   cast_dtm(book, word, n) # one term per row
 
 # Latent Dirichlet Allocation
-WH.LDA <- LDA(WH.DocumentTermMatrix,
+WH_LDA <- LDA(WH_DocumentTermMatrix,
   k = 2, # before/after Heathcliff runs away from Wuthering Heights?
-  control = list(seed = seed.smorfia) # set seed for RNG
+  control = list(seed = seed_smorfia) # set seed for RNG
 )
 
-WH.LDA.topics <- tidy(WH.LDA, matrix = "beta") %>% # extract beta coefficients from model
+WH_LDA_topics <- tidy(WH_LDA, matrix = "beta") %>% # extract beta coefficients from model
   group_by(topic) %>%
   top_n(10, beta) %>% # take the top 10 words for each topic
   ungroup() %>%
@@ -416,7 +418,7 @@ WH.LDA.topics <- tidy(WH.LDA, matrix = "beta") %>% # extract beta coefficients f
     )
   )
 
-ggplot(WH.LDA.topics, aes(term, beta, fill = factor(topic))) + # plot
+ggplot(WH_LDA_topics, aes(term, beta, fill = factor(topic))) + # plot
   geom_col(color = "black", size = .7, show.legend = FALSE) + # bars
   scale_y_continuous(breaks = seq(0, .015, .005)) + # x-axis: tick marks
   geom_hline(
@@ -435,11 +437,8 @@ ggplot(WH.LDA.topics, aes(term, beta, fill = factor(topic))) + # plot
   facet_wrap(~topic, scales = "free_y") + # subplots according to topic
   coord_flip() + # flip axes
   theme_pander(base_size = 18, pc = "white") # custom theme
-
 ```
 
 [^1]: Many thanks to [wuthering-heights.co.uk](wuthering-heights.co.uk), [SparkNotes](http://www.sparknotes.com/lit/wuthering/), and the omnipresent [Wikipedia](https://en.wikipedia.org/wiki/Wuthering_Heights).
 [^2]: Indeed, the high frequency of "Linton" may not only refer to the Linton family, but also Heathcliff and Isabella's son... damn, Miss Brontë, why did you have to repeat the same names over and over again?!?
 [^3]: There is also another character who is ill: Lockwood, a wealthy British man who rents Thrushcross Grange, meets Heathcliff at Wuthering Heights, freaks out when he dreams about Catherine Earnshaw's ghost, and then gets ill. During his convalescence, he is told the whole story by Nelly Dean, the housekeeper of Thrushcross Grange.
-
-
