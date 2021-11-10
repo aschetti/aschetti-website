@@ -105,7 +105,8 @@ WH <- gutenberg_download(WH_ID$gutenberg_id) %>% # download text
   anti_join(stop_words) # eliminate stop words (e.g., "the", "of", "to", ...)
 
 # what are the most common words used in this book?
-WH %>%
+plot_word_frequency <- 
+  WH %>%
   count(word, sort = TRUE) %>% # count number of occurrences of each word
   filter(n >= 100) %>% # keep only words whose count is > 100
   mutate(word = reorder(word, n)) %>% # reorder words as a function of number of occurrences
@@ -132,7 +133,23 @@ WH %>%
   scale_fill_viridis(option = "magma", discrete = TRUE) + # colors
   theme_pander(base_size = 18, pc = "white") # custom theme
 
+# # save to file
+# ggsave(
+#   filename = "word_frequency.png",
+#   plot = plot_word_frequency,
+#   device = "png",
+#   path = here("content/post/2018-01-29-text-analysis-wuthheights/"),
+#   scale = 2.5,
+#   width = 8,
+#   height = 8,
+#   units = "cm",
+#   dpi = 300,
+#   limitsize = TRUE
+# )
+
 ```
+
+![](word_frequency.png)
 
 Unsurprisingly, the name of the protagonist is the most frequent word in the novel, with `r as.double(count(WH, word, sort = TRUE)[1, "n"])` occurrences. The name of the co-star also pops up: *Catherine Earnshaw* (`r as.double(count(WH, word, sort = TRUE)[3, "n"])` occurrences). It's quite interesting to see the word *Linton* (`r as.double(count(WH, word, sort = TRUE)[2, "n"])` occurrences) between *Heathcliff* and *Catherine*: the two protagonists passionately love each other, but Catherine is seduced by the elegant manners of the Lintons and decides to marry *Edgar* (`r as.double(count(WH, word, sort = TRUE)[20, "n"])` occurrences).   
 *Master* is another frequent word... why? Well, Heathcliff marries *Isabella Linton*, a calculated act of revenge that allows him to become the legal owner of Thrushcross Grange. Later, he forces *Cathy* (Catherine and Edgar's daughter; `r as.double(count(WH, word, sort = TRUE)[13, "n"])` occurrences) and *Linton* (Heathcliff and Isabella's son)[^2] to get married, thus becoming Cathy's father-in-law. When Edgar dies, Heathcliff becomes the master of Wuthering Heights.
@@ -161,7 +178,8 @@ WH_emo <- WH %>%
   arrange(sentiment) # sort according to sentiment
 
 # what are the most common words split into joy, anger, fear, and sadness?
-WH_emo %>%
+plot_WH_emo <-
+  WH_emo %>%
   group_by(sentiment) %>%
   top_n(10) %>% # take the top 10 words for each sentiment class
   ungroup() %>%
@@ -190,7 +208,23 @@ WH_emo %>%
   coord_flip() + # flip axes
   theme_pander(base_size = 18, pc = "white") # custom theme
 
+# # save to file
+# ggsave(
+#   filename = "sentiment_analysis.png",
+#   plot = plot_WH_emo,
+#   device = "png",
+#   path = here("content/post/2018-01-29-text-analysis-wuthheights/"),
+#   scale = 2.5,
+#   width = 8,
+#   height = 8,
+#   units = "cm",
+#   dpi = 300,
+#   limitsize = TRUE
+# )
+
 ```
+
+![](sentiment_analysis.png)
 
 Indeed, tragedy seems to be omnipresent in the life of these characters. *Ill* occurs `r as.double(WH_emo[249, "n"])` times, *death* `r as.double(WH_emo[109, "n"])` times: Catherine Earnshaw "becomes ill" when emotionally upset (which happens fairly often) and dies right after giving birth to Cathy; Linton is a sickly boy; Edgar's physical states rapidly deteriorates, until the Grim Reaper finally claims his soul[^3]. The terror of physical ailments is palpable throughout the novel, and quite reasonably given the numerous [diseases](https://en.wikipedia.org/wiki/Diseases_and_epidemics_of_the_19th_century) spreading throughout Europe in the 19th century (cholera, typhus, smallpox, ...).   
 We can also see words considered emotionally negative but actually used in neutral ways in the novel: for instance, *fire* is categorized as conveying fear in the NRC lexicon, but Emily Brontë mostly uses it to indicate a cooking fire, a cosy fireplace, or candle light. A funny misattribution is also evident with the word *mistress*, obviously used as a form of courtesy in Wuthering Heights but rated as conveying anger in the NRC lexicon because... because... because BDSM? No idea.   
@@ -198,7 +232,16 @@ Finally, the word *love* occurs `r as.double(WH_emo[1251, "n"])` times. The NRC 
    
 Just for fun, I also made a word cloud with the top 50 words categorized as positive or negative according to the lexicon by [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html).
 
-```{r wordcloud, fig.height = 6, fig.width = 4}
+```{r wordcloud, eval = FALSE}
+
+# save to file
+png(
+  here("content/post/2018-01-29-text-analysis-wuthheights/wordcloud.png"),
+  units = "cm",
+  width = 8,
+  height = 8,
+  res = 300
+)
 
 WH %>%
   # match words and sentiments, this time from the sentiment lexicon of Liu et al. (positive/negative classes)
@@ -211,7 +254,11 @@ WH %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>% # comparison.cloud requires matrix
   comparison.cloud(colors = c("#ab3400", "#469280")) # cloud representation of occurrence of positive and negative words
 
+dev.off() # close device
+
 ```
+
+![](wordcloud.png)
 
 # Topic modeling
 
@@ -246,7 +293,8 @@ WH_LDA_topics <- tidy(WH_LDA, matrix = "beta") %>% # extract beta coefficients f
     )
   )
 
-ggplot(WH_LDA_topics, aes(term, beta, fill = factor(topic))) + # plot
+plot_WH_LDA_topics <-
+  ggplot(WH_LDA_topics, aes(term, beta, fill = factor(topic))) + # plot
   geom_col(color = "black", size = .7, show.legend = FALSE) + # bars
   scale_y_continuous(breaks = seq(0, .015, .005)) + # x-axis: tick marks
   geom_hline(
@@ -266,7 +314,23 @@ ggplot(WH_LDA_topics, aes(term, beta, fill = factor(topic))) + # plot
   coord_flip() + # flip axes
   theme_pander(base_size = 18, pc = "white") # custom theme
 
+# save to file
+ggsave(
+  filename = "WH_LDA_topics.png",
+  plot = plot_WH_LDA_topics,
+  device = "png",
+  path = here("content/post/2018-01-29-text-analysis-wuthheights/"),
+  scale = 2.5,
+  width = 8,
+  height = 8,
+  units = "cm",
+  dpi = 300,
+  limitsize = TRUE
+)
+
 ```
+
+![](WH_LDA_topics.png)
 
 *Heathcliff*, *Catherine*, and the *Lintons* (especially *Edgar*) are the major characters in this book, so it's obvious to find their names in both topics. The *Earnshaw* family seems to be more frequent in the first topic, which makes sense. In particular, the role of Mr. Earnshaw is pivotal: he is the one who travels to Liverpool, finds and adopts the orphan Heathcliff, and brings him to Wuthering Heights.   
 Besides characters' names, some words seem to be more probable in one topic compared to the other. For example, *master* is more common in topic 2, because Heathcliff becomes the master of both Wuthering Heights and Thrushcross Grange later on in the novel.   
