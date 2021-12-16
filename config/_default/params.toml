@@ -100,7 +100,7 @@ address = {street = "Burgemeester Oudlaan 50", city = "Rotterdam", region = "Sou
 coordinates = {latitude = "51.918692", longitude = "4.528308"}
 
 # Directions for visitors to locate you.
-directions = "G Building, third floor, room G3-05"
+directions = "Sanders Building, 6th floor"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
