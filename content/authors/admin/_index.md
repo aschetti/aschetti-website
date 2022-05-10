@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Coordinator Open Science
+role: Senior Advisor Open Science
 
 # Organizations/Affiliations
 organizations:
@@ -90,6 +90,6 @@ highlight_name: true
 # - Visitors
 ---
 
-I have a background in experimental psychology, cognitive and affective electrophysiology. During my academic career, I investigated the relationship between emotions and visual perception using a wide range of methodological and statistical tools. I adopted transparent and open science practices at every stage of the research cycle, from the preregistration of the initial idea to the publication of the final manuscript in peer-reviewed open access journals.
+I have a background in experimental psychology, cognitive and affective electrophysiology. As an independent researcher, I investigate the relationship between emotions and visual perception using a wide range of methodological and statistical tools. I adopt transparent and open science practices at every stage of the research cycle, from the preregistration of the initial idea to manuscript publication.
 
-As Coordinator Open Science at Erasmus Research Services (Erasmus University Rotterdam), I facilitate communications between researchers and support staff, organize events and workshops, communicate such activities on social media, and personally support individual researchers and research groups with day-to-day activities related to open science.
+As Senior Advisor Open Science at Erasmus Research Services (Erasmus University Rotterdam), my tasks include: developing educational and training materials for students, researchers, and support staff; advising researchers, research teams, and grant officers on how to best highlight commitment to open science in grant applications; advising management and policy makers on current and future (inter)national trends related to evaluation procedures at the individual and institutional level.

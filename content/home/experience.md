@@ -28,8 +28,23 @@ date_format = "Jan 2006"
   company = "Erasmus Universiteit Rotterdam"
   company_url = "https://www.eur.nl/en"
   location = "Netherlands"
-  date_start = "2019-04-01"
+  date_start = "2022-05-01"
   date_end = ""
+  description = """
+  Responsibilities:
+  
+  * develop educational and training materials for students, researchers, and support staff
+  * advise researchers, research teams, and grant officers on how to best highlight commitment to open science in grant applications
+  * advise management and policy makers on current and future (inter)national trends related to evaluation procedures at the individual and institutional level
+  """
+
+[[experience]]
+  title = "Coordinator Open Science"
+  company = "Erasmus Universiteit Rotterdam"
+  company_url = "https://www.eur.nl/en"
+  location = "Netherlands"
+  date_start = "2019-04-01"
+  date_end = "2022-04-30"
   description = """
   Responsibilities:
   
