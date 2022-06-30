@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'The Role of Cognitive Reappraisal and Expectations in Dealing with Social Feedback.'
+title: 'The Role of Cognitive Reappraisal and Expectations in Dealing with Social Feedback'
 subtitle: ''
 summary: ''
 authors:
