@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: '{EEG ERP Preregistration Template'
+title: 'EEG ERP Preregistration Template'
 subtitle: ''
 summary: ''
 authors:
