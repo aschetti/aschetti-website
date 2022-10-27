@@ -24,7 +24,7 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "Coordinator Open Science"
+  title = "Senior Advisor Open Science"
   company = "Erasmus Universiteit Rotterdam"
   company_url = "https://www.eur.nl/en"
   location = "Netherlands"
@@ -35,7 +35,7 @@ date_format = "Jan 2006"
   
   * develop educational and training materials for students, researchers, and support staff
   * advise researchers, research teams, and grant officers on how to best highlight commitment to open science in grant applications
-  * advise management and policy makers on current and future (inter)national trends related to evaluation procedures at the individual and institutional level
+  * advise management and policy makers on (inter)national trends related to evaluation procedures for individuals and institutions
   """
 
 [[experience]]
