@@ -89,7 +89,7 @@ highlight_name: true
 # - Visitors
 ---
 
-I have a background in experimental psychology, cognitive, and affective electrophysiology. As _ad interim_ Head of Open and Responsible Science (ORS) at Erasmus Research Services (Erasmus University Rotterdam), my responsibilities include:
+I have a background in experimental psychology, cognitive, and affective electrophysiology. As *ad interim* Head of Open and Responsible Science (ORS) at Erasmus Research Services (Erasmus University Rotterdam), my responsibilities include:
 - leading the development of vision, strategy, and mid-term goals of the ORS team;
 - ensuring connection and collaboration with other departments, within Erasmus Research Services and the university at large;
 - organizing, directing, and conducting everyday and existing activities of the department and managing its human and material resources.
