@@ -18,16 +18,15 @@ organizations:
   url: "https://www.eur.nl/en"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Open science, R, Bayes. Oh, and cats.
+bio: Open Science, R, Bayes. Oh, and cats.
 
 interests:
 - Open Science
 - Bayes
+- R
+- EEG
 - Attention
 - Emotion
-- EEG
-- R
-- MATLAB
 
 education:
   courses:
