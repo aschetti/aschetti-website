@@ -24,12 +24,27 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "(_ad interim_) Head of Open and Responsible Science (ORS)"
+  company = "Erasmus Research Services (Erasmus University Rotterdam)"
+  company_url = ""
+  location = "Netherlands"
+  date_start = "2023-04-01"
+  date_end = ""
+  description = """
+  Responsibilities:
+  
+  * lead development of vision, strategy, and mid-term goals of ORS team
+  * ensure connection and collaboration with other departments, within Erasmus Research Services and the university at large 
+  * organize, direct, and conduct everyday and existing activities of the department and manage its human and material resources
+  """
+
+[[experience]]
   title = "Senior Advisor Open Science"
-  company = "Erasmus Universiteit Rotterdam"
-  company_url = "https://www.eur.nl/en"
+  company = "Erasmus Research Services (Erasmus University Rotterdam)"
+  company_url = ""
   location = "Netherlands"
   date_start = "2022-05-01"
-  date_end = ""
+  date_end = "2023-03-31"
   description = """
   Responsibilities:
   
@@ -40,8 +55,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Coordinator Open Science"
-  company = "Erasmus Universiteit Rotterdam"
-  company_url = "https://www.eur.nl/en"
+  company = "Erasmus Research Services (Erasmus University Rotterdam)"
+  company_url = ""
   location = "Netherlands"
   date_start = "2019-04-01"
   date_end = "2022-04-30"
@@ -54,30 +69,30 @@ date_format = "Jan 2006"
   * support individuals and research groups with day-to-day activities
   """
 
-[[experience]]
-  title = "Post-doctoral Researcher"
-  company = "Universiteit Gent"
-  company_url = "https://www.ugent.be/en"
-  location = "Belgium"
-  date_start = "2015-10-01"
-  date_end = "2018-09-30"
-  description = """
-  Responsibilities:
-  
-  * ideation and programming of empirical studies
-  * data collection, analysis, and visualization
-  * share results (in written and oral communications) with other researchers
-  * co-supervision of MSc and PhD students
-  """
-
-[[experience]]
-  title = "Post-doctoral Researcher"
-  company = "Universität Leipzig"
-  company_url = "https://www.uni-leipzig.de/en/"
-  location = "Germany"
-  date_start = "2013-03-01"
-  date_end = "2015-09-30"
-  description = """
-  Responsibilities: see above
-  """
+# [[experience]]
+#   title = "Post-doctoral Researcher"
+#   company = "Universiteit Gent"
+#   company_url = "https://www.ugent.be/en"
+#   location = "Belgium"
+#   date_start = "2015-10-01"
+#   date_end = "2018-09-30"
+#   description = """
+#   Responsibilities:
+#   
+#   * ideation and programming of empirical studies
+#   * data collection, analysis, and visualization
+#   * share results (in written and oral communications) with other researchers
+#   * co-supervision of MSc and PhD students
+#   """
+# 
+# [[experience]]
+#   title = "Post-doctoral Researcher"
+#   company = "Universität Leipzig"
+#   company_url = "https://www.uni-leipzig.de/en/"
+#   location = "Germany"
+#   date_start = "2013-03-01"
+#   date_end = "2015-09-30"
+#   description = """
+#   Responsibilities: see above
+#   """
 +++
