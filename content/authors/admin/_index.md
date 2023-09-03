@@ -14,7 +14,7 @@ role: Senior Advisor Open Science
 
 # Organizations/Affiliations
 organizations:
-- name: Erasmus Universiteit Rotterdam
+- name: Erasmus University Rotterdam
   url: "https://www.eur.nl/en"
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,12 +22,12 @@ bio: Open science, R, Bayes. Oh, and cats.
 
 interests:
 - Open Science
-- R
-- MATLAB
 - Bayes
 - Attention
 - Emotion
 - EEG
+- R
+- MATLAB
 
 education:
   courses:
@@ -46,30 +46,30 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:antonio.schettino@igdore.org"
-- icon: twitter
+- icon: mastodon
   icon_pack: fab
-  link: https://twitter.com/asch3tti/
+  link: https://fediscience.org/@antonioschettino
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0001-8065-6082
 - icon: github
   icon_pack: fab
   link: https://github.com/aschetti/
-- icon: osf
-  icon_pack: ai
-  link: https://osf.io/zbv65/
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=D-Zc-_gAAAAJ&hl=en&oi=ao/
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Antonio_Schettino2/
-- icon: publons
-  icon_pack: ai
-  link: https://publons.com/author/337478/antonio-schettino#profile/
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/antonio-schettino/
+- icon: osf
+  icon_pack: ai
+  link: https://osf.io/zbv65/
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Antonio_Schettino2/
+# - icon: google-scholar
+#   icon_pack: ai
+#   link: https://scholar.google.com/citations?user=D-Zc-_gAAAAJ&hl=en&oi=ao/
+# - icon: publons
+#   icon_pack: ai
+#   link: https://publons.com/author/337478/antonio-schettino#profile/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -90,6 +90,9 @@ highlight_name: true
 # - Visitors
 ---
 
-I have a background in experimental psychology, cognitive and affective electrophysiology. As an independent researcher, I investigate the relationship between emotions and visual perception using a wide range of methodological and statistical tools. I adopt transparent and open science practices at every stage of the research cycle, from the preregistration of the initial idea to manuscript publication.
+I have a background in experimental psychology, cognitive, and affective electrophysiology. As _ad interim_ Head of Open and Responsible Science (ORS) at Erasmus Research Services (Erasmus University Rotterdam), my responsibilities include:
+- leading the development of vision, strategy, and mid-term goals of the ORS team;
+- ensuring connection and collaboration with other departments, within Erasmus Research Services and the university at large;
+- organizing, directing, and conducting everyday and existing activities of the department and managing its human and material resources.
 
-As Senior Advisor Open Science at Erasmus Research Services (Erasmus University Rotterdam), my tasks include: developing educational and training materials for students, researchers, and support staff; advising researchers, research teams, and grant officers on how to best highlight commitment to open science in grant applications; advising management and policy makers on current and future (inter)national trends related to evaluation procedures at the individual and institutional level.
+I am also founder and former coordinator of the Open Science Community Rotterdam ([OSCR](https://www.openscience-rotterdam.com/)).
