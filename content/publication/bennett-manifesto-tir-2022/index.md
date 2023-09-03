@@ -16,8 +16,8 @@ authors:
 - H. Ye
 tags: []
 categories: []
-date: '2022-10-20'
-lastmod: 2022-10-20T14:00:00+02:00
+date: '2023-08-14'
+lastmod: 2023-08-14T14:00:00+02:00
 featured: false
 draft: false
 
@@ -35,11 +35,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2022-10-20'
+publishDate: '2023-08-14'
 publication_types:
-- '4'
-abstract: "
-The Scientific Reform Movement has highlighted the need for large research teams with diverse skills. This has necessitated the growth of professional team infrastructure roles (TIRs) who support research through specialised skills, but do not have primary responsibility for conceiving or leading research projects. TIRs such as Lab Technicians, Project Managers, Data Stewards, Community Managers, and Research Software Engineers all play an important role in ensuring the success of a research project, but are commonly neglected under current reward and recognition procedures, which focus on the individual academic researcher instead of the teams involved. Without meaningful identification and recognition of TIR contributions, we risk reinforcing the conceptual and practical division between academic researchers and TIRs. This situation is inequitable and detrimental to the research enterprise: the limited potential for career advancement for TIRs may cause them to leave for other occupations, ultimately leading to a loss of institutional skill, expertise, and memory. This contribution explores the evolution of specialist TIRs and the status of these positions in various settings. We provide three case study descriptions of TIR activities, so that readers may become more familiar with the breadth and depth of their work. We then propose system-level changes designed to embed meaningful recognition of all contributions. Acknowledging the contributions of all research roles will help retain skill and expertise, and lead to collaborative research ecosystems that are well-positioned to address complex research challenges."
-publication: ''
-doi: 10.53962/knm3-bnvx
+- '2'
+abstract: 'The Scientific Reform Movement has highlighted the need for large research teams with diverse skills. This has necessitated the growth of professional team infrastructure roles (TIRs) who support research through specialised skills, but do not have primary responsibility for conceiving or leading research projects. TIRs such as Lab Technicians, Project Managers, Data Stewards, Community Managers, and Research Software Engineers all play an important role in ensuring the success of a research project, but are commonly neglected under current reward and recognition procedures, which focus on the *individual* academic researcher instead of the *teams* involved.
+Without meaningful identification and recognition of TIR contributions, we risk reinforcing the conceptual and practical division between academic researchers and TIRs. This situation is inequitable and detrimental to the research enterprise: the limited potential for career advancement for TIRs may cause them to leave for other occupations, ultimately leading to a loss of institutional skill, expertise, and memory.
+This contribution explores the evolution of specialist TIRs and the status of these positions in various settings. We provide three case study descriptions of TIR activities, so that readers may become more familiar with the breadth and depth of their work. We then propose system level changes designed to embed meaningful recognition of all contributions. Acknowledging the contributions of all research roles will help retain skill and expertise, and lead to collaborative research ecosystems that are well-positioned to address complex research challenges.'
+publication: '*Journal of Trial and Error*'
+doi: 10.36850/mr8
 ---
