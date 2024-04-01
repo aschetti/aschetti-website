@@ -24,7 +24,7 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "(_ad interim_) Head of Open and Responsible Science (ORS)"
+  title = "Head of Open and Responsible Science (ORS)"
   company = "Erasmus Research Services (Erasmus University Rotterdam)"
   company_url = ""
   location = "Netherlands"
@@ -34,7 +34,7 @@ date_format = "Jan 2006"
   Responsibilities:
   
   * lead development of vision, strategy, and mid-term goals of ORS team
-  * ensure connection and collaboration with other departments, within Erasmus Research Services and the university at large 
+  * ensure connection and collaboration with other departments, within Erasmus Research Services, and the university at large 
   * organize, direct, and conduct everyday and existing activities of the department and manage its human and material resources
   """
 
@@ -48,9 +48,9 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * develop educational and training materials for students, researchers, and support staff
-  * advise researchers, research teams, and grant officers on how to best highlight commitment to open science in grant applications
-  * advise management and policy makers on (inter)national trends related to evaluation procedures for individuals and institutions
+  * develop educational and training materials for students, researchers, and professional staff
+  * advise researchers and grant officers on how to best highlight commitment to open science in grant applications
+  * advise professional staff and management on how to implement ORS in hiring and promotion
   """
 
 [[experience]]
@@ -63,10 +63,10 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * facilitate communication between researchers and support staff
+  * coordinate [Open Science Community Rotterdam](https://www.openscience-rotterdam.com/)
+  * facilitate communication between researchers and professional staff
   * organize events and workshops
   * promote open science activities on social media
-  * support individuals and research groups with day-to-day activities
   """
 
 # [[experience]]
