@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Advisor Open Science
+role: Head of Open and Responsible Science
 
 # Organizations/Affiliations
 organizations:
@@ -63,12 +63,9 @@ social:
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Antonio_Schettino2/
-# - icon: google-scholar
-#   icon_pack: ai
-#   link: https://scholar.google.com/citations?user=D-Zc-_gAAAAJ&hl=en&oi=ao/
-# - icon: publons
-#   icon_pack: ai
-#   link: https://publons.com/author/337478/antonio-schettino#profile/
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=D-Zc-_gAAAAJ&hl=en&oi=ao/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -89,9 +86,10 @@ highlight_name: true
 # - Visitors
 ---
 
-I have a background in experimental psychology, cognitive, and affective electrophysiology. As *ad interim* Head of Open and Responsible Science (ORS) at Erasmus Research Services (Erasmus University Rotterdam), my responsibilities include:
-- leading the development of vision, strategy, and mid-term goals of the ORS team;
-- ensuring connection and collaboration with other departments, within Erasmus Research Services and the university at large;
-- organizing, directing, and conducting everyday and existing activities of the department and managing its human and material resources.
+I have a background in experimental psychology, in particular cognitive and affective electrophysiology. I am unreasonably excited by Bayesian multilevel models, and use them as much as my abilities allow me to.
 
-I am also founder and former coordinator of the Open Science Community Rotterdam ([OSCR](https://www.openscience-rotterdam.com/)).
+I founded (and coordinated for a couple of years) the [Open Science Community Rotterdam](https://www.openscience-rotterdam.com/) (OSCR), a bottom-up community where researchers and professional staff discuss and learn about open research practices. OSCR is part of the [International Network of Open Science & Scholarship Communities](https://doi.org/10.1093/scipol/scab039) (INOSC), which embraces many communities in the Netherlands and other regions in the world.
+
+As Head of Open and Responsible Science (ORS) at Erasmus Research Services, I have the privilege to work with Data Stewards, Ethics Secretaries, and Open Science experts on the common goal to make open scholarship the _default_ way of working at Erasmus University Rotterdam.
+
+
