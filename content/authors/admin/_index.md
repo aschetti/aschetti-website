@@ -88,8 +88,8 @@ highlight_name: true
 
 I have a background in experimental psychology, in particular cognitive and affective electrophysiology. I am unreasonably excited by Bayesian multilevel models, and use them as much as my abilities allow me to.
 
-I founded (and coordinated for a couple of years) the [Open Science Community Rotterdam](https://www.openscience-rotterdam.com/) (OSCR), a bottom-up community where researchers and professional staff discuss and learn about open research practices. OSCR is part of the [International Network of Open Science & Scholarship Communities](https://doi.org/10.1093/scipol/scab039) (INOSC), which embraces many communities in the Netherlands and other regions in the world.
+I founded (and coordinated for a few years) the [Open Science Community Rotterdam](https://www.openscience-rotterdam.com/) (OSCR), a bottom-up community where researchers and professional staff discuss and learn about open research practices. OSCR is part of the [International Network of Open Science & Scholarship Communities](https://doi.org/10.1093/scipol/scab039) (INOSC), which embraces many communities in the Netherlands ([OSC-NL](https://osc-international.com/open-science-community-the-netherlands/)) and other regions in the world.
 
-As Head of Open and Responsible Science (ORS) at Erasmus Research Services, I have the privilege to work with Data Stewards, Ethics Secretaries, and Open Science experts on the common goal to make open scholarship the _default_ way of working at Erasmus University Rotterdam.
+As Head of Open and Responsible Science (ORS) at Engagement & Research Services, I have the privilege to work with Data Stewards, Ethics Secretaries, and Open Science experts on the common goal to make open scholarship the _default_ way of working at Erasmus University Rotterdam.
 
 
