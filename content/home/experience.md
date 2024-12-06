@@ -25,7 +25,7 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Head of Open and Responsible Science (ORS)"
-  company = "Erasmus Research Services (Erasmus University Rotterdam)"
+  company = "Engagement & Research Services (Erasmus University Rotterdam)"
   company_url = ""
   location = "Netherlands"
   date_start = "2023-04-01"
