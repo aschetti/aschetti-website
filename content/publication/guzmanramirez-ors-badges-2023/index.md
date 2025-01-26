@@ -36,5 +36,5 @@ publication_types:
 abstract: 'This document describes the framework created to recognize and reward researchers that practice open science. The criteria for the badges were inspired by the [Open Science: Altmetrics and Rewards](https://ec.europa.eu/research-and-innovation/sites/default/files/rio/report/MLE%2520OS_Final%2520Report_0.pdf) Mutual Learning Exercise from the European Commission, and the [Evaluation of Research Careers fully acknowledging Open Science Practices](https://data.europa.eu/doi/10.2777/75255).   
 Within this framework we developed 17 badges, each of them with 4 levels of expertise, from 0 stars (beginning) to 3 stars (exemplary).   
 **NOTE**: This version contains only the description and requirements for the badges in category 1, we will update this version with the rest of the categories as soon as they are approved.'
-doi: 10.5281/zenodo.8278785
+doi: 10.5281/zenodo.8278784
 ---
