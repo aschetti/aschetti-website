@@ -64,9 +64,11 @@ The holidays are approaching, so we thought of adding a small Christmas hat on t
 
 A simple white background was not enough. We needed something more appropriate for this period of the year... ah, yes! Snow!   
    
-In a recent tweet, [Ilya Kashnitsky](https://twitter.com/ikashnitsky) showed how to create static snow flakes on a dark background:
+In a recent tweet, [Ilya Kashnitsky](https://twitter.com/ikashnitsky) showed how to create static snow flakes on a dark background. 
 
-```{r tweet_Kashnitsky, echo = FALSE}
+**EDIT 2025-01-26**: In the original post, I could link directly to the tweet. However, due to Elon Musk's [enshittification](https://en.wikipedia.org/wiki/Enshittification) of the platform, the tweet or the whole account might have been deleted. I cannot verify because I am no longer on Twitter.
+
+```{r tweet_Kashnitsky, echo = FALSE, eval = FALSE}
 
 blogdown::shortcode('tweet', '937786580231696384')
 
@@ -89,9 +91,11 @@ The end result is a big flat face fluctuating in the air, like a spooky and omin
 
 ## EDIT December 19th, 2017
 
-[Paul van der Laken](https://paulvanderlaken.com/) just posted a much better version of the animated snow flakes:
+[Paul van der Laken](https://paulvanderlaken.com/) just posted a much better version of the animated snow flakes. 
 
-```{r tweet_van_der_Laken, echo = FALSE}
+**EDIT 2025-01-26**: Same as above: in the original post, I could link directly to the tweet, but now it is no longer available.
+
+```{r tweet_van_der_Laken, echo = FALSE, eval = FALSE}
 
 blogdown::shortcode('tweet', '943052409043062784')
 
