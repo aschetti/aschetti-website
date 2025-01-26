@@ -50,12 +50,12 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["2025_EEGManyLabs_Cortex/index.md"]
+projects: ["2025_EEGManyLabs_Cortex"]
 publishDate: '2025-03-01'
 publication_types:
 - '2'
 abstract: "
 Two event-related brain potential (ERP) components, the frontocentral feedback-related negativity (FRN) and the posterior P300, are key in feedback processing. The FRN typically exhibits greater amplitude in response to negative and unexpected outcomes, whereas the P300 is generally more pronounced for positive outcomes. In an influential ERP study, Hajcak et al., (2005) manipulated outcome valence and expectancy in a guessing task. They found the FRN was larger for negative outcomes regardless of expectancy, and the P300 larger for unexpected outcomes regardless of valence. These findings challenged the dominant Reinforcement Learning Theory of the ERN. We aimed to replicate these results within the #EEGManyLabs project (Pavlov et al., 2021) across thirteen labs. Our replication, including robustness tests, a PCA and Bayesian models, found that both FRN and P300 were significantly modulated by outcome valence and expectancy: FRN amplitudes (no-reward - reward) were largest for unexpected outcomes, and P300 amplitudes were largest for reward outcomes. These results were consistent across different methods and analyses. Although our findings only partially replicate the original study, they underscore the complexity of feedback processing and demonstrate how aspects of Reinforcement Learning Theory may apply to the P300 component, reinforcing the need for rigorous ERP research methodologies."
-publication: ''
+publication: '*Cortex*'
 doi: 10.1016/j.cortex.2024.12.017
 ---
