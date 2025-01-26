@@ -70,7 +70,7 @@ In a recent tweet, [Ilya Kashnitsky](https://twitter.com/ikashnitsky) showed how
 
 ```{r tweet_Kashnitsky, echo = FALSE, eval = FALSE}
 
-blogdown::shortcode('tweet', '937786580231696384')
+# blogdown::shortcode('tweet', '937786580231696384')
 
 ```
 
@@ -97,7 +97,7 @@ The end result is a big flat face fluctuating in the air, like a spooky and omin
 
 ```{r tweet_van_der_Laken, echo = FALSE, eval = FALSE}
 
-blogdown::shortcode('tweet', '943052409043062784')
+# blogdown::shortcode('tweet', '943052409043062784')
 
 ```
 
