@@ -5,7 +5,8 @@ tags:
 - Attention
 - EEG
 - ERP
-- TOJ
+- BF
+- brms
 date: "2025-01-26"
 
 # Optional external URL for project (replaces project detail page).
