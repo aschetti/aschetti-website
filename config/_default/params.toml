@@ -127,7 +127,7 @@ appointment_url = ""
 sharing_image = "hairy_rings_pink.jpg"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = "asch3tti"
+# twitter = "asch3tti"
 
 ############################
 ## Regional Settings
@@ -270,7 +270,7 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  google_analytics = "UA-109818166-1"
+  google_analytics = ""
   google_tag_manager = ""
 
 ############################
